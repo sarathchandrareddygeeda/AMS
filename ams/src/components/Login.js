@@ -7,11 +7,10 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios"
 export default function Login() {
   const theme = useTheme();
-//   const [login,setLogin]=useState(false)
+  const [login,setLogin]=useState(false)
 // const loginhandle = ()=>
 // {
-//   setLogin(true);
-//   theme.handlogin(true);
+
 // }
 const [res, setRes] = useState(null);
 
@@ -26,6 +25,8 @@ const handleSubmit =(event)=>
   }).then((response)=>{
     console.log(response.data);
     setRes(response.data)
+      setLogin(true);
+  theme.handlogin(true);
     navigate("/");
   }).catch((err)=>{console.log(err)})
 }
@@ -44,7 +45,7 @@ const handleSubmit =(event)=>
                     <input type="email" placeholder="Email" name="email" />
                     <label>Password</label>
                     <input type="text" placeholder="PASSWORD" name="password" />
-                    <button class="login6_submit" >Login</button>{/*value={login} onClick={loginhandle} */}
+                    <button class="login6_submit" value={login}   >Login</button>{/**/}
                   </form>
                 </div>
               </div>
