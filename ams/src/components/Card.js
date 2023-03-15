@@ -2,9 +2,10 @@
 // import axios from 'axios';
 // // import '../styles/card.scss'
 // export default function Card() {
-import { useState } from "react";
+import { useEffect, useState } from "react";
 export default function Card() {
   const [image, setImage] = useState("");
+  const [allImage,setAllImage]=useState([]);
   function covertToBase64(e) {
     console.log(e);
 
@@ -20,6 +21,9 @@ export default function Card() {
       console.log("Error: ", error);
     };
   }
+  useEffect(()=>{
+    getImage()
+  },[])
   function uploadImage() {
     fetch("http://localhost:6969/api/upload", {
       method: "POST",
@@ -37,6 +41,18 @@ export default function Card() {
       })
     }).then((res) => res.json()).then((data) => console.log(data))
   }
+
+
+
+  function getImage(){
+    fetch("http://localhost:6969/api/card-get", {
+      method: "GET"   
+    }).then((res) => res.json()).then((data) => {console.log(data)
+      setAllImage(data.data)
+    })
+  }
+
+
   return (
     <div className="auth-wrapper">
       <div className="auth-inner" style={{ width: "auto" }}>
@@ -48,6 +64,11 @@ export default function Card() {
           <img width={100} height={100} src={image} />
         )}
         <button onClick={uploadImage}>Upload</button>
+        {allImage.map(data=>{
+          return(
+            <img width={100} height={100} src={data.image} />
+          )
+        })}
       </div>
     </div>
   );

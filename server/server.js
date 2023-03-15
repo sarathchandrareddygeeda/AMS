@@ -28,7 +28,7 @@ const registerRoutes = require('./routes/register');
 const upload=require('./routes/card')
 app.use('/api/auth', authRoutes);
 app.use('/api/register', registerRoutes);
-app.use('/api/upload', upload);
+app.use('/api', upload);
 // Start the server
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
