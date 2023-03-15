@@ -8,6 +8,7 @@ import About from './components/About';
 import { ThemeProvider } from './components/themeContext';
 import BikeParts from './components/BikeParts'
 import Register from './components/Register';
+import Card from './components/Card'
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
       <Route path="about" element={<About />} />
       <Route path="spareparts" element={<BikeParts />} /> 
       <Route path="register" element={<Register />} /> 
+      <Route path="upload" element={<Card />} /> 
    </Routes>
    </ThemeProvider>
   </>

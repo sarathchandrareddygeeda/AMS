@@ -7,9 +7,9 @@ var cors = require('cors')
 
 app.use(cors())
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-
+// var bodyParser = require('body-parser');
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 // Connect to MongoDB
 mongoose.connect("mongodb+srv://admin:admin@cluster0.dr8fhmz.mongodb.net/AMS?retryWrites=true&w=majority", {
   useNewUrlParser: true,
@@ -25,9 +25,10 @@ db.once('open', function () {
 // Register routes
 const authRoutes = require('./routes/auth');
 const registerRoutes = require('./routes/register');
+const upload=require('./routes/card')
 app.use('/api/auth', authRoutes);
 app.use('/api/register', registerRoutes);
-
+app.use('/api/upload', upload);
 // Start the server
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);

@@ -30,7 +30,6 @@ const handleSubmit =(event)=>
     navigate("/");
   }).catch((err)=>{console.log(err)})
 }
-
   return (
     <div>
       <div class={theme.theme === true ? "login6_dark" : "login6_white"}>
@@ -49,7 +48,6 @@ const handleSubmit =(event)=>
                   </form>
                 </div>
               </div>
-
               <div class="login6_right-inductor text-center justify-content-center">
                 <img src={cart} alt="" />
                 <p className="primary text-decoration-underline">Not a Member?</p>
