@@ -24,7 +24,8 @@ export default function Card() {
   useEffect(()=>{
     getImage()
   },[])
-  function uploadImage() {
+  const  uploadImage=(event) =>{
+    const data1 = new FormData(event.currentTarget);
     fetch("http://localhost:6969/api/upload", {
       method: "POST",
 
@@ -38,6 +39,8 @@ export default function Card() {
       },
       body: JSON.stringify({
         base64: image,
+        name:data1.get('name'),
+        price:data1.get('price')
       })
     }).then((res) => res.json()).then((data) => console.log(data))
   }
@@ -54,8 +57,13 @@ export default function Card() {
 
 
   return (
+    <form onSubmit={uploadImage}>
     <div className="auth-wrapper">
       <div className="auth-inner" style={{ width: "auto" }}>
+      <label>Description</label>
+                    <input type="text" placeholder="Name" name='name' />
+      <label>Price</label>
+                    <input type="text" placeholder="price" name='price' />
         Let's Upload Image
         <input accept="image/*" type="file" onChange={covertToBase64} />
         {image === "" || image === null ? (
@@ -63,7 +71,7 @@ export default function Card() {
         ) : (
           <img width={100} height={100} src={image} />
         )}
-        <button onClick={uploadImage}>Upload</button>
+        <button type="submit">Upload</button>
         {allImage.map(data=>{
           return(
             <img width={100} height={100} src={data.image} />
@@ -71,6 +79,7 @@ export default function Card() {
         })}
       </div>
     </div>
+    </form>
   );
 }
 

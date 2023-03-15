@@ -5,10 +5,10 @@ const mongoose = require('mongoose');
 const Images = mongoose.model("ImageDetails");
 
 router.post("/upload", async (req, res) => {
-  const { base64 } = req.body;
+  const { name,price,base64 } = req.body;
 
   try {
-   await Images.create({ image: base64 });
+   await Images.create({ name:name,price:price,image: base64 });
 
     res.send({ Status: "ok" });
   } catch (error) {
@@ -22,7 +22,7 @@ router.get("/card-get", async (req, res) => {
 
   try {
    await Images.find({}).then(data =>{
-    res.send({ Status: "error", data: data });
+    res.send({ Status: "success", data: data });
    })
   } catch (error) {
     res.send({ Status: "error", data: error });
