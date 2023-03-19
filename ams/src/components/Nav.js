@@ -3,7 +3,6 @@ import "../styles/nav.css";
 import { useState } from "react";
 import { useTheme } from "./themeContext";
 import { Link } from "react-router-dom";
-import { SvgIcon } from "@mui/material";
 export default function Nav({ children }) {
   const [theme, setTheme] = useState(false);
   const themer = useTheme();
@@ -49,11 +48,7 @@ export default function Nav({ children }) {
             <ul className="navbar-nav">
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/">
-                  <SvgIcon>
-                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
                     Home
-                  </SvgIcon>
-                  
                 </Link>
               </li>
               <li className="nav-item dropdown">
