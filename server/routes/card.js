@@ -2,8 +2,12 @@ const express = require("express");
 const Card = require("../models/Card");
 const router = express.Router();
 const mongoose = require('mongoose');
+const {MongoClient} = require('mongodb');
 const Images = mongoose.model("ImageDetails");
-
+const url="mongodb+srv://admin:admin@cluster0.dr8fhmz.mongodb.net/AMS?retryWrites=true&w=majority"
+const client = new MongoClient(url);
+const db = client.db("AMS");
+const images = db.collection("ImageDetails");
 router.post("/upload", async (req, res) => {
   const { name,price,base64 } = req.body;
 
@@ -16,10 +20,12 @@ router.post("/upload", async (req, res) => {
   }
 });
 
-
+router.get('/card',async (req,res) => {
+  const result = await images.find().toArray();
+  console.log(result);
+  res.send(result);
+})
 router.get("/card-get", async (req, res) => {
-  const { base64 } = req.body;
-
   try {
    await Images.find({}).then(data =>{
     res.send({ Status: "success", data: data });
@@ -28,6 +34,8 @@ router.get("/card-get", async (req, res) => {
     res.send({ Status: "error", data: error });
   }
 });
+
+
 
 module.exports = router;
 

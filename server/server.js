@@ -26,10 +26,11 @@ db.once('open', function () {
 const authRoutes = require('./routes/auth');
 const registerRoutes = require('./routes/register');
 const upload=require('./routes/card')
+const cart = require('./routes/cart')
 app.use('/api/auth', authRoutes);
 app.use('/api/register', registerRoutes);
 app.use('/api', upload);
-// Start the server
+app.use('/api',cart)
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });

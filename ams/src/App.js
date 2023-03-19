@@ -9,6 +9,8 @@ import { ThemeProvider } from './components/themeContext';
 import BikeParts from './components/BikeParts'
 import Register from './components/Register';
 import Card from './components/Card'
+import Test from './components/Test'
+import Cart from './components/Cart';
 function App() {
   return (
     <>
@@ -22,6 +24,8 @@ function App() {
       <Route path="spareparts" element={<BikeParts />} /> 
       <Route path="register" element={<Register />} /> 
       <Route path="upload" element={<Card />} /> 
+      <Route path="test" element={<Test />} />
+      <Route path="cart" element={<Cart />} />
    </Routes>
    </ThemeProvider>
   </>
