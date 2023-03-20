@@ -10,7 +10,6 @@ import BikeParts from './components/BikeParts'
 import Register from './components/Register';
 import Card from './components/Card'
 import Test from './components/Test'
-import Cart from './components/Cart';
 import NoPage from './components/NoPage';
 import Cart1 from './components/Cart1';
 
@@ -28,7 +27,6 @@ function App() {
       <Route path="register" element={<Register />} /> 
       <Route path="upload" element={<Card />} /> 
       <Route path="test" element={<Test />} />
-      <Route path="cart" element={<Cart />} />
       <Route path="cart1" element={<Cart1 />} />
       <Route path="*" element={<NoPage />} />
    </Routes>
