@@ -1,0 +1,26 @@
+.card-body{
+    width: 1080px;
+    display:inline;
+    height:175px;
+}
+.cart_img{
+    width: 175px;
+    height: 125px;
+    margin-left: 0%;
+}
+.cart_container{
+    width: max-content;
+}
+.lead{
+font-family: FreeMono, monospace;
+font-size: medium;
+}
+.card .k{
+    height: 150px;
+    width:200px;
+}
+.cart_btn{
+    width: 200px;
+    align-items: center;
+    text-align: center;
+}
