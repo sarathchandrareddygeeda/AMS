@@ -21,9 +21,7 @@ export default function Card() {
       console.log("Error: ", error);
     };
   }
-  useEffect(()=>{
-    getImage()
-  },[])
+
   const  uploadImage=(event) =>{
     const data1 = new FormData(event.currentTarget);
     fetch("http://localhost:6969/api/upload", {
@@ -47,13 +45,6 @@ export default function Card() {
 
 
 
-  function getImage(){
-    fetch("http://localhost:6969/api/card-get", {
-      method: "GET"   
-    }).then((res) => res.json()).then((data) => {console.log(data)
-      setAllImage(data.data)
-    })
-  }
 
 
   return (
@@ -72,11 +63,6 @@ export default function Card() {
           <img width={100} height={100} src={image} />
         )}
         <button type="submit">Upload</button>
-        {allImage.map(data=>{
-          return(
-            <img width={100} height={100} src={data.image} />
-          )
-        })}
       </div>
     </div>
     </form>
