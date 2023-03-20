@@ -3,6 +3,7 @@ import "../styles/nav.css";
 import { useState } from "react";
 import { useTheme } from "./themeContext";
 import { Link } from "react-router-dom";
+import b from "../media/profile.jpg"
 export default function Nav({ children }) {
   const [theme, setTheme] = useState(false);
   const themer = useTheme();
@@ -22,9 +23,8 @@ export default function Nav({ children }) {
   return (
     <nav
       class={
-        theme
-          ? "navbar navbar-expand-lg  navbar-dark bg-dark"
-          : "navbar navbar-expand-lg bg-light"
+        1
+          ? "navbar navbar-expand-lg  navbar-dark bg-dark": 0
       }
     >
       <div className="container-fluid">
@@ -112,29 +112,7 @@ export default function Nav({ children }) {
                   </li>
                 </ul>
               </li>
-              <li className="nav-item dropdown">
-                <Link
-                  className="nav-link dropdown-toggle"
-                  to="/"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  History
-                </Link>
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link className="dropdown-item" to="/">
-                      Order History
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/">
-                      Service History
-                    </Link>
-                  </li>
-                </ul>
-              </li>
+              
               <li className="nav-item">
                 <Link className="nav-link" to="about">
                   About Us
@@ -161,18 +139,43 @@ export default function Nav({ children }) {
                   </div>
                 </a>
               </li>
-  <li>
-              <div class="dropdown-menu">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="userMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Welcome, User
-  </button>
-  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userMenuButton">
-    <a class="dropdown-item" href="#">Profile</a>
-    <a class="dropdown-item" href="#">Settings</a>
-    <a class="dropdown-item" href="#">Logout</a>
-  </div>
-</div>
-</li>
+              
+              <li className="nav-item dropdown">
+              
+                <Link
+                  className="btn btn-gradient-light text-light  nav-link dropdown-toggle"
+                  role="button "
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  
+              
+              Profile&nbsp;
+              <img src={b} width="25" height="25" class="d-inline-block align-top rounded-circle" alt=""/>
+                </Link>
+                <ul className="dropdown-menu">
+                <li>
+                    <Link className="dropdown-item" to="/bikes">
+                   Account
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/bikes">
+                    Order History
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/bikes">
+                    Service History
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/spareparts">
+                      Logout
+                    </Link>
+                  </li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
