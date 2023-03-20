@@ -15,7 +15,7 @@ export default function Product({ children }) {
   {
     getProducts1()
  
-  },[state])
+  })
 
   function getProducts1() {
     axios.get("http://localhost:6969/api/cart-get", {

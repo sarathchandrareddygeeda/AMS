@@ -161,6 +161,18 @@ export default function Nav({ children }) {
                   </div>
                 </a>
               </li>
+  <li>
+              <div class="dropdown-menu">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="userMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Welcome, User
+  </button>
+  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userMenuButton">
+    <a class="dropdown-item" href="#">Profile</a>
+    <a class="dropdown-item" href="#">Settings</a>
+    <a class="dropdown-item" href="#">Logout</a>
+  </div>
+</div>
+</li>
             </ul>
           </div>
         </div>
