@@ -77,7 +77,7 @@ function Cart1() {
 
         
             <div class="card-body justify-content-center align-items-center">
-              <button type="button" class="cart_btn btn-warning btn-block btn-lg ">Proceed to Pay</button>
+              <button type="button" class="cart_btn btn-primary btn-block btn-lg ">Proceed to Pay</button>
             
           </div>
   

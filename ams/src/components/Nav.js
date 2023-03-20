@@ -85,7 +85,7 @@ export default function Nav({ children }) {
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/">
+                <Link className="nav-link" to="/cart">
                   🛒Cart
                 </Link>
               </li>
@@ -121,9 +121,8 @@ export default function Nav({ children }) {
               <li className="nav-item">
                 {!themer.login?<Link className="nav-link" to="login">
                   Login
-                </Link>:<Link className="nav-link" to="login" onClick={handlelogout}>
-                  Logout
-                </Link>}
+                </Link>: <p></p>
+                }
               </li>
               <li className="nav-item">
                 <a className="nav-link">
@@ -139,7 +138,7 @@ export default function Nav({ children }) {
                   </div>
                 </a>
               </li>
-              
+              {(themer.login)?
               <li className="nav-item dropdown">
               
                 <Link
@@ -169,13 +168,19 @@ export default function Nav({ children }) {
                     Service History
                     </Link>
                   </li>
+                  
                   <li>
-                    <Link className="dropdown-item" to="/spareparts">
-                      Logout
+                    <Link className="dropdown-item" to="/login" onClick={handlelogout}>
+                      
+                      
+                  Logout <p></p>
+                
                     </Link>
                   </li>
+
                 </ul>
-              </li>
+              </li>:<></>
+}
             </ul>
           </div>
         </div>
