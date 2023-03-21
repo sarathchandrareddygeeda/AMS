@@ -6,7 +6,7 @@
 
   .navbar
   {
-    color:rgb(3, 4, 4);
+    color:rgb(50, 153, 153);
   }
   .nav_right
   {
@@ -16,11 +16,6 @@
   {
     text-align: right;
     color: rgb(99, 99, 99);
-  }
-  nav a.active{
-    text-decoration: none;
-    font-weight: bold;
-    color: aquamarine;
   }
   .bg-light .navbar-toggler-icon {
     display: inline-block;
@@ -59,8 +54,14 @@
   left: 0; 
 }
 .navbar-dark .navbar-nav .nav-link {
-  color: #f8f9fa;
+  color: #ffffff;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: medium;
+  font-weight: bold;
 }
 .form-check-input:hover{
     cursor: pointer;
+}
+.bg-dark{
+background-color:#F1A7F1;
 }

@@ -134,7 +134,7 @@ export default function Nav({ children }) {
                       type="checkbox"
                       id="flexSwitchCheckDefault"
                     />
-                    {theme ? <label>🌙</label> : <label>🌞</label>}{" "}
+                    {theme ? <label>🌜</label> : <label>🌞</label>}{" "}
                   </div>
                 </a>
               </li>

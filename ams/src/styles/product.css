@@ -12,24 +12,26 @@
     animation-delay: 0s;
     animation-iteration-count: 1;
     animation-name: slideInRight;
-    background: #ffffff;
+    background: linear-gradient(#7EE8FA,#EEC0C6);
     padding: 40px;
   }
 .product_white{
-    background-color: #fff;
+    background: linear-gradient(#7EE8FA,#EEC0C6);
 }
 .product_white .btn{
     height: 40px;
     width: 200px;
     box-shadow: 0px 0px 5px ;
     border-radius: 10px;
-   
+    background-color: #ffffff;
+    color: black;
 }
 .product_white .product_card
 {
-    border:solid black;
+    border:solid rgb(255, 255, 255);
     margin: 30px;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
+    background: transparent;
     width: 250px;
     min-height: auto;
     padding: 15px;
@@ -40,7 +42,7 @@
 .product_white .product_card:hover{
     cursor: pointer;
     transform: scale(1.09);
-    transition: all 1s ease; 
+    transition: all 0.7s ease; 
 }
 
 .product_white .product_image img
