@@ -8,7 +8,6 @@ import { ThemeProvider } from "./components/themeContext";
 import BikeParts from "./components/BikeParts";
 import Register from "./components/Register";
 import Card from "./components/Card";
-import Test from "./components/Test";
 import NoPage from "./components/NoPage";
 import Cart from "./components/Cart";
 
@@ -25,7 +24,6 @@ function App() {
           <Route path="spareparts" element={<BikeParts />} />
           <Route path="register" element={<Register />} />
           <Route path="upload" element={<Card />} />
-          <Route path="test" element={<Test />} />
           <Route path="cart" element={<Cart />} />
           <Route path="*" element={<NoPage />} />
         </Routes>

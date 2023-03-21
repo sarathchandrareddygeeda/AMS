@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import axios from "axios";
 import { useState } from "react";
+import '../styles/preloader.css';
 import '../styles/cart.css';
 
-
 function Cart1() {
-    const [result, setResult] = useState([]);
+    const [result, setResult] = useState(" ");
 
     useEffect(()=>
 {
@@ -22,23 +22,35 @@ function Cart1() {
             console.log(error)
         })
     }
-    
+    if(result===" "){
+      return(
+        <div className='perloader'>
+        <div class="loader">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      )
+
+    }else{
   return (
-    result.map((obj)=>{
-        if(obj.name)
-        {
-          return(
+    
+    <div>
+     <div class="d-flex justify-content-between align-items-center mb-4">
+            <h3 class="fw-normal mb-0 text-black">Shopping Cart</h3>
+            
+          </div>
+          
+    { result.map((obj)=>{   
+      return(     
             <div>
     <section class="h-100" >
     <div class="cart_container h-100 py-5">
       <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-10">
-  
-          <div class="d-flex justify-content-between align-items-center mb-4">
-            <h3 class="fw-normal mb-0 text-black">Shopping Cart</h3>
-            
-          </div>
-  
+        <div class="col-10">     
           <div class="card rounded-3 mb-4">
             <div class="card-body p-4">
               <div class="row d-flex justify-content-between align-items-center">
@@ -73,27 +85,26 @@ function Cart1() {
               </div>
             </div>
           </div>
-
-
-        
-            <div class="card-body justify-content-center align-items-center">
-              <button type="button" class="cart_btn btn-primary btn-block btn-lg ">Proceed to Pay</button>
-            
-          </div>
-  
         </div>
       </div>
     </div>
   </section>
   </div>
-          )
-        }
+      )  
+
+        
     }
 
 
   )
+          }
+                <div class="card-body justify-content-center align-items-center">
+      <button type="button" class="cart_btn btn-primary btn-block btn-lg ">Proceed to Pay</button>
+    
+  </div>  
+  </div>
   )
   
 }
-
+}
 export default Cart1

@@ -1,17 +1,62 @@
-import React from "react";
+import React , { useEffect }from "react";
 import "../styles/product.css";
-import bounce1 from "../media/bike1.png";
-import bounce2 from "../media/bike2.png";
-import bounce3 from "../media/bike3.png";
-import bounce4 from "../media/bike4.png";
-import bounce5 from "../media/bike5.png";
-import bounce6 from "../media/bike6.png";
-import bounce7 from "../media/bike7.png";
-import bounce8 from "../media/bike8.png";
+import { useState } from "react";
+import axios from "axios";
 import { Navigate} from 'react-router-dom';
 import { useTheme } from "./themeContext";
 
+
+
 export default function Product({ children }) {
+
+  const[state, setState]=useState(1)
+  const [result, setResult] = useState([]);
+  var [up, setUp]=useState([]);
+  const [res1, setRes1] = useState();
+  useEffect(()=>
+  {
+    // if(state===1){
+    getProducts()
+    // setState(0)
+    // }
+  },[state])
+
+  function getProducts() {
+    axios.get("http://localhost:6969/api/card", {
+        params: {}
+    }).then((response) => {
+        console.log(response.data);
+        setResult(response.data);
+    }).catch((error) => {
+        console.log(error)
+    })
+
+
+
+
+}
+const handleCart= (event, objid,objprice,objname,objimage)=>
+{
+ console.log(objid)
+ console.log(objprice)
+ console.log(objname)
+ console.log(objimage)
+  event.preventDefault();
+
+  axios.post('http://localhost:6969/api/cart', {
+    productId:objid,
+    name:objname,
+    price:objprice,
+    image:objimage,
+}).then((response)=>{
+  console.log(response.data);
+  setRes1(response.data)
+}).catch((err)=>{console.log(err)})
+// setState(state+1)
+}
+
+
+
   const theme = useTheme();
   if(theme.login===true)
   {
@@ -21,25 +66,26 @@ export default function Product({ children }) {
         >
           <div className="product_header">
           <div class="product_grid product_main-content ">
+          {
+        result.map((obj) => (
             <div class="product_card">
               <div class="product_image">
-                <img src={bounce1} alt="tree" />
+                <img src={obj.image} alt="tree" />
               </div>
-
               <div class="product_description">
-                Hero Glamour XTEC Drum Booking for Ex-showroom Price (Candy
-                Blazing Red/Blue)
+                    {obj.name}
                 <div class="products_description_buttons">
-                  <h3>₹83,388</h3>
+                  <h3>{obj.price}</h3>
 
-                  <button type="button" class="btn btn-primary  ">
-                    <small>Buy Now</small>
+                  <button type="button" class="btn btn-primary " onClick={(e)=>handleCart(e, obj._id,obj.price,obj.name,obj.image)}  name="productId">
+                    <small  >Buy Now</small>
                   </button>
                 </div>
               </div>
             </div>
+          ))}  
 
-            <div class="product_card">
+            {/* <div class="product_card">
               <div class="product_image">
                 <img src={bounce2} alt="tree" />
               </div>
@@ -150,7 +196,7 @@ export default function Product({ children }) {
               </div>
 
               <div class="product_description">
-                Hero Maestro Edge 125 Drum Booking for Ex-showroom Price (Matte
+                Hero Maestro Edge 125 Drum Booking for Ex-showroom Price (Mattep
                 )
                 <div class="products_description_buttons">
                   <h3> ₹77,896 </h3>
@@ -160,7 +206,7 @@ export default function Product({ children }) {
                   </button>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
           </div>
         </div>
