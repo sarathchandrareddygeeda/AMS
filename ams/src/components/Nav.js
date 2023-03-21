@@ -47,7 +47,7 @@ export default function Nav({ children }) {
           <div className=" collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
+                <Link className="navk nav-link " aria-current="page" to="/">
                     Home
                 </Link>
               </li>
@@ -85,7 +85,7 @@ export default function Nav({ children }) {
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/cart">
+                <Link className="navk nav-link" to="/cart">
                   🛒Cart
                 </Link>
               </li>
@@ -114,18 +114,18 @@ export default function Nav({ children }) {
               </li>
               
               <li className="nav-item">
-                <Link className="nav-link" to="about">
+                <Link className="navk nav-link" to="about">
                   About Us
                 </Link>
               </li>
               <li className="nav-item">
-                {!themer.login?<Link className="nav-link" to="login">
+                {!themer.login?<Link className="navk nav-link" to="login">
                   Login
                 </Link>: <p></p>
                 }
               </li>
               <li className="nav-item">
-                <a className="nav-link">
+                <a className="navk nav-link">
                   <div className="form-check form-switch">
                     <input
                       className="form-check-input"
