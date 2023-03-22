@@ -1,9 +1,9 @@
 @keyframes slideInRight {
     100% {
-      transform: translateX(0%);
+      transform: translateY(0%);
     }
     0% {
-      transform: translateX(100%);
+      transform: translateY(100%);
     }
   }
   .product_white .product_header {
@@ -12,19 +12,19 @@
     animation-delay: 0s;
     animation-iteration-count: 1;
     animation-name: slideInRight;
-    background: linear-gradient(#7EE8FA,#EEC0C6);
+    background: linear-gradient(to right,#7EE8FA 0%,#EEC0C6 100%);
     padding: 40px;
   }
 .product_white{
-    background: linear-gradient(#7EE8FA,#EEC0C6);
+    background: linear-gradient(to right,#7EE8FA 0%,#EEC0C6 100%);
 }
 .product_white .btn{
     height: 40px;
     width: 200px;
     box-shadow: 0px 0px 5px ;
     border-radius: 10px;
-    background-color: #ffffff;
-    color: black;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
 }
 .product_white .product_card
 {
