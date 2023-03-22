@@ -5,6 +5,7 @@ import {useState,createContext,useContext} from 'react'
 export const ThemeProvider = ({children}) => {
     const [theme,setTheme] = useState(false)
     const [login ,setLogin] =useState(false)
+    const [email,setEmail]=useState(null)
      const hand = ()=>
  {
    if(theme===false){
@@ -14,15 +15,17 @@ export const ThemeProvider = ({children}) => {
      setTheme(false);
     }
  }
-  const handlogin=()=>
+  const handlogin=(uname)=>
   {
     setLogin(true)
+    setEmail(uname)
   }
   const handlogout=()=>{
     setLogin(false)
+    setEmail(null)
   }
     return(
-        <ThemeContext.Provider value={{theme,hand,login,handlogin,handlogout}}>{children}</ThemeContext.Provider>
+        <ThemeContext.Provider value={{theme,hand,login,handlogin,handlogout,email}}>{children}</ThemeContext.Provider>
     )
 }
 export const useTheme = () => {

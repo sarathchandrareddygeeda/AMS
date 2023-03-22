@@ -13,12 +13,12 @@ export default function Product({ children }) {
   const [result, setResult] = useState([]);
   var [up, setUp]=useState([]);
   const [res1, setRes1] = useState();
+  const themer = useTheme();
   useEffect(()=>
   {
-    // if(state===1){
+
     getProducts()
-    // setState(0)
-    // }
+  
   },[state])
 
   function getProducts() {
@@ -45,6 +45,7 @@ const handleCart= (event, objid,objprice,objname,objimage)=>
 
   axios.post('http://localhost:6969/api/cart', {
     productId:objid,
+    email:themer.email,
     name:objname,
     price:objprice,
     image:objimage,
