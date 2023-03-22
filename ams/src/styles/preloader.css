@@ -15,7 +15,9 @@
     display: flex;
     background: white;
     padding: 150px;
-    box-shadow: 0px 40px 60px -20px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0px 40px 60px -20px rgba(0, 0, 0, 0.2); */
+    left:600px;
+    top:200px;
   }
   
   .loader span {
