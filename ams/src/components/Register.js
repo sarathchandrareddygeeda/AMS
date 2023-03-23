@@ -5,9 +5,11 @@ import { useTheme } from "./themeContext";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { useState } from "react";
-export default function Register( ) {
-const theme = useTheme();
+import { useNavigate } from "react-router-dom";
 
+export default function Register() {
+const theme = useTheme();
+const navigate = useNavigate();
   const [res, setRes] = useState(null);
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -18,8 +20,9 @@ const theme = useTheme();
       password : data.get('password')
     }).then((response)=>{
       console.log(response.data);
-      
       setRes(response.data)
+      navigate("/login");
+
     }).catch((err)=>{console.log(err)})
   }
 
