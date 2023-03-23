@@ -89,7 +89,7 @@ function Cart1() {
           </div>
           
     { result.map((obj)=>{   
-      if(obj.email===themer.email){  
+      if(result.length()!==0 && obj.email===themer.email){  
         return(
             <div>
     <section class="h-100" >
@@ -140,7 +140,7 @@ function Cart1() {
       }
       else{
         return(
-        <div>no itmes</div>
+        <div>no items</div>
         )
         }
 
@@ -150,10 +150,7 @@ function Cart1() {
 
   )
           }
-                <div class="card-body justify-content-center align-items-center">
-      <button type="button" class="cart_btn btn-primary btn-block btn-lg ">Proceed to Pay</button>
-    
-  </div>  
+                
   </div>
   )
   

@@ -14,6 +14,7 @@ router.post('/cart',async(req,res)=>
 {
     const{
         productId,
+        email,
         name,
         price,image
     }=req.body;
@@ -24,7 +25,7 @@ router.post('/cart',async(req,res)=>
   }
   else
   {
-  const cart = new Cart({productId,name,price,image});
+  const cart = new Cart({productId,email,name,price,image});
     await cart.save();
     res.json({ message: 'User created successfully' });
   }
