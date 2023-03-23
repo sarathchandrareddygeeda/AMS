@@ -89,7 +89,7 @@ function Cart1() {
           </div>
           
     { result.map((obj)=>{   
-      if(result.length()!==0 && obj.email===themer.email){  
+      if( obj.email===themer.email){  
         return(
             <div>
     <section class="h-100" >
