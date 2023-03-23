@@ -149,7 +149,7 @@ export default function Nav({ children }) {
                 >
                   
               
-              Profile&nbsp;
+              {themer.email}&nbsp;
               <img src={b} width="25" height="25" class="d-inline-block align-top rounded-circle" alt=""/>
                 </Link>
                 <ul className="dropdown-menu">

@@ -3,10 +3,10 @@ import axios from "axios";
 import { useState } from "react";
 import '../styles/preloader.css';
 import '../styles/cart.css';
-
+import { useTheme } from './themeContext';
 function Cart1() {
     const [result, setResult] = useState(" ");
-
+  const themer= useTheme();
     useEffect(()=>
 {
   getProducts1()
@@ -22,6 +22,50 @@ function Cart1() {
             console.log(error)
         })
     }
+
+
+
+
+
+
+
+
+    const handleDelete = (id)=> {
+      if (window.confirm(`Are you sure you want to delete ${id}`)) {
+        fetch("http://localhost:6969/api/remove", {
+          method: "POST",
+          crossDomain: true,
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+          body: JSON.stringify({
+            _id: id,
+          }),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+          console.log(data.data);
+            getProducts1();
+          });
+      }
+    };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     if(result===" "){
       return(
         <div className='perloader'>
@@ -45,7 +89,8 @@ function Cart1() {
           </div>
           
     { result.map((obj)=>{   
-      return(     
+      if(obj.email===themer.email){  
+        return(
             <div>
     <section class="h-100" >
     <div class="cart_container h-100 py-5">
@@ -80,7 +125,7 @@ function Cart1() {
                   <h5 class="mb-0">{obj.price}</h5>
                 </div>
                 <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                  <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
+                  <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"><button class="btn btn-primary" type="button" onClick={()=>handleDelete(obj._id)}>Remove</button></i></a>
                 </div>
               </div>
             </div>
@@ -90,7 +135,14 @@ function Cart1() {
     </div>
   </section>
   </div>
-      )  
+        )
+       
+      }
+      else{
+        return(
+        <div>no itmes</div>
+        )
+        }
 
         
     }

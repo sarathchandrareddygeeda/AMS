@@ -8,10 +8,6 @@ import axios from "axios"
 export default function Login() {
   const theme = useTheme();
   const [login,setLogin]=useState(false)
-// const loginhandle = ()=>
-// {
-
-// }
 const [res, setRes] = useState(null);
 
 const navigate = useNavigate();
@@ -26,7 +22,7 @@ const handleSubmit =(event)=>
     console.log(response.data);
     setRes(response.data)
       setLogin(true);
-  theme.handlogin(true);
+  theme.handlogin(data.get('email'),);
     navigate("/");
   }).catch((err)=>{console.log(err)})
 }
