@@ -9,13 +9,18 @@
  
  
 }
+.login_white{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right,#7EE8FA 0%,#EEC0C6 100%);
+}
 .login6_white .login_header {
   animation-duration: 1.25s;
   animation-timing-function: ease-in-out;
   animation-delay: 0s;
   animation-iteration-count: 1;
   animation-name: slideInUpLogin;
-  background: #ffffff;
+  background: linear-gradient(to right,#7EE8FA 0%,#EEC0C6 100%);
   padding: 40px;
 }
 @keyframes slideInUpRegister {
@@ -34,14 +39,14 @@
   animation-delay: 0s;
   animation-iteration-count: 1;
   animation-name: slideInUpRegister;
-  background: #ffffff;
+  background: linear-gradient(to right,#7EE8FA 0%,#EEC0C6 100%);
   padding: 40px;
 }
 
 .login6_white .login6_login {
-    height: 600px;
+    height: 665px;
     width: 100%;
-    background: #ffffff;
+    background: linear-gradient(to right,#7EE8FA 0%,#EEC0C6 100%);
     position: relative;
 }
 .login6_white .login6_login_box {
@@ -51,7 +56,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background: #fff;
+    background: transparent;
     border:2px solid rgb(0, 0, 0);
     border-radius: 10px;
     box-shadow: 1px 4px 22px -8px #0004;
@@ -101,7 +106,7 @@
     font-size: 14px;
 }
 .login6_white .login6_left{
-	background: linear-gradient(-45deg, #b7b2b2, #ffffff);
+	background: linear-gradient(-45deg, #aba2a2, #ffffff);
 }
 .login6_white .login6_submit {
     border: none;
