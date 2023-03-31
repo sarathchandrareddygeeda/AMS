@@ -4,7 +4,7 @@ const User = require('../models/User');
 const router = express.Router();
 
 router.post('/', async (req, res) => {
-  const { email, password } = req.body;
+  const { email, password, admin} = req.body;
 
   // Find user by email
   const user = await User.findOne({ email });
@@ -20,7 +20,12 @@ router.post('/', async (req, res) => {
   }
   else
   {
-    return res.status(200).json({ message: ' Success' });
+    if(user.admin){
+       return res.status(200).json({ message: 'Admin' });
+    }
+    else{
+      return res.status(201).json({ message: 'Customer' });
+    }
   }
 
   // Generate token

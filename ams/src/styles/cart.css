@@ -2,14 +2,28 @@
     width: 1080px;
     display:inline;
     height:175px;
+    background: transparent;
 }
 .cart_img{
     width: 175px;
     height: 125px;
     margin-left: 0%;
 }
+.cart_styling{
+    background:linear-gradient(to right,#7EE8FA 0%,#EEC0C6 100%);
+}
 .cart_container{
     width: max-content;
+}
+.cart_shopping{
+    align-items: center;
+    justify-content: center;
+    display:flex;
+    position: relative;
+    left: 720px;
+    color:#2b2727;
+    font-style: italic;
+    font-weight:bold;
 }
 .lead{
 font-family: FreeMono, monospace;

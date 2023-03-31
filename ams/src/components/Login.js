@@ -21,16 +21,24 @@ const handleSubmit =(event)=>
   }).then((response)=>{
     console.log(response.data);
     setRes(response.data)
+    if(response.data.message === 'Customer'){
+      navigate("/about");
       setLogin(true);
-  theme.handlogin(data.get('email'),);
-    navigate("/");
+      theme.handlogin(data.get('email'),);
+    }else{
+      setLogin(true);
+      theme.handlogin('Admin');
+      navigate("/");
+    }
+      
   }).catch((err)=>{console.log(err)})
 }
   return (
     <div>
       <div class={theme.theme === true ? "login6_dark" : "login6_white"}>
-        <div class="login_header">
+      <div class="login_header">
           <div class="login6_login">
+          
             <div class="login6_login_box">
               <div class="login6_left">
                 <div class="login6_contact">

@@ -62,7 +62,7 @@ export default function Card() {
         ) : (
           <img width={100} height={100} src={image} />
         )}
-        <button type="submit">Upload</button>
+        <button type="submit" class="upload_button">Upload</button>
       </div>
     </div>
     </form>

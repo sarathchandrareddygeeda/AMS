@@ -82,9 +82,9 @@ function Cart1() {
     }else{
   return (
     
-    <div>
+    <div className="cart_styling">
      <div class="d-flex justify-content-between align-items-center mb-4">
-            <h3 class="fw-normal mb-0 text-black">Shopping Cart</h3>
+            <h3 class="cart_shopping">Shopping Cart</h3>
             
           </div>
           
@@ -137,14 +137,7 @@ function Cart1() {
   </div>
         )
        
-      }
-      else{
-        return(
-        <div>no items</div>
-        )
-        }
-
-        
+      }      
     }
 
 

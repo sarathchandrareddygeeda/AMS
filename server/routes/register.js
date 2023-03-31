@@ -5,6 +5,7 @@ const router = express.Router();
 
 router.post('/', async (req, res) => {
   const { username, email, password } = req.body;
+  const admin=false
 
   // Check if user already exists
   const existingUser = await User.findOne({ email });
@@ -15,9 +16,8 @@ router.post('/', async (req, res) => {
   // Hash password
   const salt = await bcrypt.genSalt(10);
   const hashedPassword = await bcrypt.hash(password, salt);
-
   // Create user
-  const user = new User({ username, email, password: hashedPassword });
+  const user = new User({ username, email, password: hashedPassword,admin });
   await user.save();
 
   res.json({ message: 'User created successfully' });

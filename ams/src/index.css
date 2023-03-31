@@ -5,6 +5,7 @@
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background:linear-gradient(to right,#7EE8FA 0%,#EEC0C6 100%);
 }
 .body_dark
 {

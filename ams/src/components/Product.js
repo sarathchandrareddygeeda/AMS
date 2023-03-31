@@ -10,7 +10,7 @@ import { useTheme } from "./themeContext";
 export default function Product({ children }) {
 
   const[state, setState]=useState(1)
-  const [result, setResult] = useState([]);
+  const [result, setResult] = useState(" ");
   var [up, setUp]=useState([]);
   const [res1, setRes1] = useState();
   const themer = useTheme();
@@ -61,6 +61,21 @@ const handleCart= (event, objid,objprice,objname,objimage)=>
   const theme = useTheme();
   if(theme.login===true)
   {
+    if(result===" "){
+      return(
+        <div className='perloader'>
+        <div class="loader">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      )
+
+    }
+    else{
   return (
         <div
           className={theme.theme === true ? "product_dark" : "product_white"}
@@ -212,6 +227,7 @@ const handleCart= (event, objid,objprice,objname,objimage)=>
           </div>
         </div>
   );
+          }
 }
 if(theme.login===false){
   return(
