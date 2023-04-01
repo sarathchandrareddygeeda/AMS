@@ -10,7 +10,8 @@ import Register from "./components/Register";
 import Card from "./components/Card";
 import NoPage from "./components/NoPage";
 import Cart from "./components/Cart";
-
+import Services from "./components/Services"
+import Upload from "./components/Upload"
 function App() {
   return (
     <>
@@ -26,6 +27,8 @@ function App() {
           <Route path="upload" element={<Card />} />
           <Route path="cart" element={<Cart />} />
           <Route path="*" element={<NoPage />} />
+          <Route path="services" element={<Services />} />
+          <Route path="upload1" element={<Upload />} />
         </Routes>
       </ThemeProvider>
     </>
