@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 
 const serviceSchema = new mongoose.Schema({
-  fname: { type: String, required: true },
-  bcompany: { type: String, required: true, unique: true },
-  bmodel: { type: String, required: true },
-  bnumber:{ type: String, required: true },
-  problem:{ type: String, required: true },
+  fname:  String,
+  bcompany: String,
+  bmodel:  String,
+  bnumber: String,
+  problem: String, 
 });
 
 const Service = mongoose.model("Service", serviceSchema);
