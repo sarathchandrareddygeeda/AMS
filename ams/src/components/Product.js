@@ -2,7 +2,7 @@ import React , { useEffect }from "react";
 import "../styles/product.css";
 import { useState } from "react";
 import axios from "axios";
-import { Navigate} from 'react-router-dom';
+import { Navigate , Link} from 'react-router-dom';
 import { useTheme } from "./themeContext";
 export default function Product({ children }) {
   const[state, setState]=useState(1)
@@ -80,7 +80,7 @@ const handleCart= (event, objid,objprice,objname,objimage)=>
                   <h3>{obj.price}</h3>
 
                   <button type="button" class="btn btn-primary " onClick={(e)=>handleCart(e, obj._id,obj.price,obj.name,obj.image)}  name="productId">
-                    <small  >Buy Now</small>
+                  <Link to='/custinfo'><small  >Buy Now</small></Link>
                   </button>
                 </div>
               </div>

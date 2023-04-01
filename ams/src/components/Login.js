@@ -28,7 +28,7 @@ const handleSubmit =(event)=>
     }else{
       setLogin(true);
       theme.handlogin('Admin');
-      navigate("/admin");
+      navigate("/dash");
     }
       
   }).catch((err)=>{console.log(err)})

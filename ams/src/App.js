@@ -11,7 +11,8 @@ import Card from "./components/Card";
 import NoPage from "./components/NoPage";
 import Cart from "./components/Cart";
 import Services from "./components/Services"
-import Sidebar from "./components/Sidebar"
+import Dashboard from "./components/Dashboard";
+import CustInfo from "./components/CustInfo";
 function App() {
   return (
     <>
@@ -28,7 +29,9 @@ function App() {
           <Route path="cart" element={<Cart />} />
           <Route path="*" element={<NoPage />} />
           <Route path="services" element={<Services />} />
-          <Route path="admin" element={<Sidebar />} />
+          <Route path="dash" element={<Dashboard />} />
+          <Route path="custinfo" element={<CustInfo />} />
+
         </Routes>
       </ThemeProvider>
     </>
