@@ -11,11 +11,16 @@ import Card from "./components/Card";
 import NoPage from "./components/NoPage";
 import Cart from "./components/Cart";
 import Services from "./components/Services"
-import Sidebar from "./components/Sidebar"
+import Sidebar from "./admin/Sidebar"
+import User from "./admin/User";
+import Dashboard from "./components/Dashboard"
 function App() {
+
   return (
     <>
       <ThemeProvider>
+       
+        
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -29,7 +34,10 @@ function App() {
           <Route path="*" element={<NoPage />} />
           <Route path="services" element={<Services />} />
           <Route path="admin" element={<Sidebar />} />
+          <Route path="admin-user" element={<User />} />
+          <Route path="dash" element={<Dashboard />} />
         </Routes>
+
       </ThemeProvider>
     </>
   );
