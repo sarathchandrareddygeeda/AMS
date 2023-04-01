@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 export default function Dashboard() {
   return (
     <div className="admin_body">
-      
     <div className={"product_white"}>
       <div className="product_header">
         <div class="product_grid product_main-content ">
