@@ -27,10 +27,12 @@ const authRoutes = require('./routes/auth');
 const registerRoutes = require('./routes/register');
 const upload=require('./routes/card')
 const cart = require('./routes/cart')
+const service = require('./routes/service')
 app.use('/api/auth', authRoutes);
 app.use('/api/register', registerRoutes);
 app.use('/api', upload);
 app.use('/api',cart)
+app.use('/api',service)
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
