@@ -22,13 +22,13 @@ const handleSubmit =(event)=>
     console.log(response.data);
     setRes(response.data)
     if(response.data.message === 'Customer'){
-      navigate("/about");
+      navigate("/");
       setLogin(true);
       theme.handlogin(data.get('email'),);
     }else{
       setLogin(true);
       theme.handlogin('Admin');
-      navigate("/");
+      navigate("/admin");
     }
       
   }).catch((err)=>{console.log(err)})
