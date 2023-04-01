@@ -29,6 +29,7 @@ function getProducts() {
     <body class="body_white">
       <br />
       <br />
+      <h1 className="user_heading">User Details</h1>
       <section class="intro">
         <div class="bg-image h-100" >
           <div class="mask d-flex align-items-center h-100">
