@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function Register() {
 const theme = useTheme();
 const navigate = useNavigate();
@@ -21,13 +22,42 @@ const navigate = useNavigate();
     }).then((response)=>{
       console.log(response.data);
       setRes(response.data)
+      notify();
       navigate("/login");
 
-    }).catch((err)=>{console.log(err)})
+    }).catch((err)=>{console.log(err)
+    notify1(err)})
   }
-
+  function notify(){
+ 
+    toast.success("Registration Successful", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      // autoClose:false
+      });
+  }
+  function notify1(err)
+{
+  toast.error(err, {
+    position: "bottom-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+    })
+}
   return (
     <div>
+      <ToastContainer/>
       <div class={theme.theme === true ? "login6_dark" : "login6_white"} >
         <div class="register_header">
           <div class="login6_login">
