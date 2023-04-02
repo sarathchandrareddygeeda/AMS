@@ -94,7 +94,13 @@ export default function Nav({ children }) {
                     Services
                 </Link>
               </li>
-              
+              {(themer.email==="Admin")?
+              <li className="nav-item">
+                <Link className="navk nav-link " aria-current="page" to="/dash">
+                    DashBoard
+                </Link>
+              </li>:<div></div>}
+
               <li className="nav-item">
                 <Link className="navk nav-link" to="about">
                   About Us
