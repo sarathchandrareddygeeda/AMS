@@ -9,10 +9,17 @@ const url =
   const client = new MongoClient(url);
 const db = client.db("AMS");
 const images = db.collection("users");
+const cust=db.collection("custinfos");
 router.get("/admin-user", async (req, res) => {
     const result = await images.find().toArray();
     const j = JSON.stringify(result)
     console.log(j);
     res.send(j);
+  });
+  router.get("/admin-custinfo", async (req, res) => {
+    const result = await cust.find().toArray();
+    const j = JSON.stringify(result)
+    console.log(j);
+    res.send(result);
   });
   module.exports = router;

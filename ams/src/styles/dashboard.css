@@ -1,0 +1,10 @@
+.admin_body .product_header1 {
+    animation-duration: 1.25s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-name: slideInRight;
+    background: linear-gradient(to right,#7EE8FA 0%,#EEC0C6 100%);
+    padding: 40px;
+    height: 660px;
+}

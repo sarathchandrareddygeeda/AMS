@@ -12,31 +12,31 @@
   box-sizing: inherit;
 }
 
-html {
+.u html {
   font-family: "Inter", sans-serif;
   font-size: 14px;
   box-sizing: border-box;
 }
 
 @supports (font-variation-settings: normal) {
-  html {
+  .u html {
     font-family: "Inter var", sans-serif;
   }
 }
 
-body {
+.u body {
   margin: 0;
 }
 
-h1 {
+.u h1 {
   margin-bottom: 1rem;
 }
 
-p {
+.u p {
   color: var(--color-gray);
 }
 
-hr {
+.u hr {
   height: 1px;
   width: 100%;
   background-color: var(--color-light-gray);
@@ -44,19 +44,19 @@ hr {
   margin: 2rem 0;
 }
 
-.container {
+.u .container {
   max-width: 40rem;
   padding: 10vw 2rem 0;
   margin: 0 auto;
   height: 100vh;
 }
 
-.form {
+.u .form {
   display: grid;
   grid-gap: 1rem;
 }
 
-.field {
+.u .field {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -65,7 +65,7 @@ hr {
   border-radius: .25rem;
 }
 
-.field__label {
+.u .field__label {
   color: var(--color-gray);
   font-size: 0.6rem;
   font-weight: 300;
@@ -73,7 +73,7 @@ hr {
   margin-bottom: 0.25rem
 }
 
-.field__input {
+.u .field__input {
   padding: 0;
   margin: 0;
   border: 0;
@@ -85,22 +85,22 @@ hr {
   appearance: none;
   background-color: transparent;
 }
-.field:focus-within {
+.u .field:focus-within {
   border-color: #000;
 }
 
-.fields {
+.u .fields {
   display: grid;
   grid-gap: 1rem;
 }
-.fields--2 {
+.u .fields--2 {
   grid-template-columns: 1fr 1fr;
 }
-.fields--3 {
+.u .fields--3 {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.button {
+.u .button {
   background-color: #000;
   text-transform: uppercase;
   font-size: 0.8rem;
@@ -114,6 +114,6 @@ hr {
   cursor: pointer;
   outline: 0;
 }
-.button:focus-visible {
+.u .button:focus-visible {
   background-color: #333;
 }
