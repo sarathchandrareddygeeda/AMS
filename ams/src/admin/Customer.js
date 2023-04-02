@@ -14,7 +14,7 @@ export default function User() {
     },)
 
 function getProducts() {
-    axios.get("http://localhost:6969/api/admin-user", {
+    axios.get("http://localhost:6969/api/admin-custinfo", {
         params: {}
     }).then((response) => {
         console.log(response.data);
@@ -28,7 +28,7 @@ function getProducts() {
   return (
     <body class="body_white">
       <br />
-      <h1 className="user_heading">User Details</h1>
+      <h1 className="user_heading">Customer Details</h1>
       <br />
       <section class="intro">
         <div class="bg-image h-100" >
@@ -46,9 +46,11 @@ function getProducts() {
                         <table class="table table-striped mb-0">
                           <thead >
                             <tr>
-                              <th scope="col">Id</th>
-                              <th scope="col">Username</th>
-                              <th scope="col">Email</th>
+                              <th scope="col">User Name</th>
+                              <th scope="col">Phone Number</th>
+                              <th scope="col">Address</th>
+                              <th scope="col">Zip Code</th>
+                              <th scope="col">City</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -56,9 +58,11 @@ function getProducts() {
                             result.map((obj)=>{
                                 return(
                                 <tr>
-                                  <td>{obj._id}</td>
-                                  <td>{obj.username}</td>
-                                  <td>{obj.email}</td>
+                                  <td>{obj.fname}</td>
+                                  <td>{obj.pno}</td>
+                                  <td>{obj.address}</td>
+                                  <td>{obj.zipcode}</td>
+                                  <td>{obj.city}</td>
                                 </tr>
                                 )
                             }

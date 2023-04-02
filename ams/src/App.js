@@ -14,6 +14,7 @@ import Services from "./components/Services"
 import User from "./admin/User";
 import Dashboard from "./components/Dashboard";
 import CustInfo from "./components/CustInfo";
+import Customer from "./admin/Customer"
 function App() {
 
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="admin-user" element={<User />} />
           <Route path="dash" element={<Dashboard />} />
           <Route path="custinfo" element={<CustInfo />} />
+          <Route path="customers" element={<Customer />} />
         </Routes>
 
       </ThemeProvider>

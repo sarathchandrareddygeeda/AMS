@@ -12,6 +12,7 @@ export default function CustInfo() {
       .post("http://localhost:6969/api/custinfo", {
         fname: data.get("firstname"),
         lname: data.get("lastname"),
+        pno:data.get("pno"),
         address: data.get("address"),
         state: data.get("state"),
         country: data.get("country"),
@@ -55,6 +56,17 @@ export default function CustInfo() {
                 type="text"
                 id="lastname"
                 name="lastname"
+              />
+            </label>
+            <label class="field">
+              <span class="field__label" for="lastname">
+                PhoneNumber
+              </span>
+              <input
+                class="field__input"
+                type="text"
+                id="lastname"
+                name="pno"
               />
             </label>
           </div>

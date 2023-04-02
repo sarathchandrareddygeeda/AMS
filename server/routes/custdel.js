@@ -4,9 +4,9 @@ const CustInfo = require('../models/CustomerDetails');
 const router = express.Router();
 
 router.post('/custinfo', async (req, res) => {
-  const { fname, lname, address, country,zip,city,state} = req.body;
+  const { fname, lname, pno, address, country,zipcode,city,state} = req.body;
 
-  const user = new CustInfo({ fname,  lname, address,state,country,zip,city });
+  const user = new CustInfo({ fname,  lname, pno, address,state,country,zipcode,city });
   await user.save();
 
   res.json({ message: 'CustInfo Saved successfully' });
