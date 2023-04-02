@@ -71,7 +71,7 @@ export default function Nav({ children }) {
                       Spare Parts
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link className="dropdown-item" to="/">
                       Accessories
                     </Link>
@@ -80,7 +80,7 @@ export default function Nav({ children }) {
                     <Link className="dropdown-item" to="/">
                       Repair Tools
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </li>
 
