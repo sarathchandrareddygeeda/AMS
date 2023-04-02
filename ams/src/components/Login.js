@@ -5,6 +5,9 @@ import { useTheme } from "./themeContext";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+  // import 'react-toastify/dist/ReactToastify.css';
 export default function Login() {
   const theme = useTheme();
   const [login, setLogin] = useState(false);
@@ -12,6 +15,7 @@ export default function Login() {
 
   const navigate = useNavigate();
   const handleSubmit = (event) => {
+   
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     axios
@@ -22,22 +26,71 @@ export default function Login() {
       .then((response) => {
         console.log(response.data);
         setRes(response.data);
+        
         if (response.data.message === "Customer") {
           navigate("/");
+          notify();
           setLogin(true);
           theme.handlogin(data.get("email"));
         } else {
           setLogin(true);
+          notify2()
           theme.handlogin("Admin");
           navigate("/dash");
         }
       })
       .catch((err) => {
         console.log(err);
-      });
+        notify1();
+      }); 
+      
+     
   };
+  function notify2(){
+ 
+    toast.success("Welcome Admin", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      // autoClose:false
+      });
+  }
+function notify(){
+ 
+    toast.success("Login Successful", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      // autoClose:false
+      });
+  }
+function notify1()
+{
+  toast.error("Invalid Credentials", {
+    position: "bottom-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+    })
+}
+
   return (
     <div>
+      <ToastContainer/>
       <div class={theme.theme === true ? "login6_dark" : "login6_white"}>
         <div class="login_header">
           <div class="login6_login">
@@ -49,11 +102,10 @@ export default function Login() {
                     <label>Email</label>
                     <input type="email" placeholder="Email" name="email" />
                     <label>Password</label>
-                    <input type="text" placeholder="PASSWORD" name="password" />
+                    <input type="password" placeholder="PASSWORD" name="password" />
                     <button class="login6_submit" value={login}>
                       Login
                     </button>
-                    {/**/}
                   </form>
                 </div>
               </div>

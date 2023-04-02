@@ -2,6 +2,7 @@ import React from "react";
 import user from "../media/userimg1.png";
 import product from "../media/productimg1.jpg"
 import { Link } from "react-router-dom";
+import upload from "../media/upload.png"
 export default function Dashboard() {
   return (
     <div className="admin_body">
@@ -48,9 +49,35 @@ export default function Dashboard() {
                 </div>
               </div>
             </div>
+            <div class="product_card">
+              <div class="product_image">
+                <img src={upload} alt="tree" />
+              </div>
+              <div class="product_description">
+                {/* {obj.name} */}
+                <div class="products_description_buttons">
+                  {/* <h3>{obj.price}</h3> */}
+                <br />
+                <Link to='/upload'>
+                  <button
+                    type="button"
+                    class="btn btn-primary "
+                    name="productId"
+                  >
+                    <small>Upload</small>
+                  </button>
+                  </Link>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
     </div>
     </div>
+
+
+
+
+
   );
 }

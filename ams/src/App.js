@@ -14,12 +14,13 @@ import Services from "./components/Services"
 import User from "./admin/User";
 import Dashboard from "./components/Dashboard";
 import CustInfo from "./components/CustInfo";
+import { ToastContainer } from "react-toastify";
 function App() {
 
   return (
     <>
       <ThemeProvider>
-       
+     
         
         <Nav />
         <Routes>
@@ -37,7 +38,7 @@ function App() {
           <Route path="dash" element={<Dashboard />} />
           <Route path="custinfo" element={<CustInfo />} />
         </Routes>
-
+        <ToastContainer/>
       </ThemeProvider>
     </>
   );
