@@ -1,6 +1,6 @@
 import React from "react";
 import user from "../media/userimg1.png";
-import product from "../media/productimg1.jpg"
+import customer from "../media/customerimg1.png"
 import { Link } from "react-router-dom";
 import upload from "../media/upload.png"
 export default function Dashboard() {
@@ -32,20 +32,22 @@ export default function Dashboard() {
             </div>
             <div class="product_card">
               <div class="product_image">
-                <img src={product} alt="tree" />
+                <img src={customer} alt="tree" />
               </div>
               <div class="product_description">
                 {/* {obj.name} */}
                 <div class="products_description_buttons">
                   {/* <h3>{obj.price}</h3> */}
                 <br />
+                <Link to='/customers'>
                   <button
                     type="button"
                     class="btn btn-primary "
                     name="productId"
                   >
-                    <small>Products</small>
+                    <small>Customers</small>
                   </button>
+                  </Link>
                 </div>
               </div>
             </div>
