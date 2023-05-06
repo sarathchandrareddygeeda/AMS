@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import '../styles/services.css'
 import axios from "axios"
-
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 export default function Services() {
 	const [res, setRes] = useState(null);
 	const handleSubmit =(event)=>
@@ -16,11 +17,42 @@ export default function Services() {
 	problem:data.get('problems')
   }).then((response)=>{
     console.log(response.data);
+	notify()
     setRes(response.data)      
-  }).catch((err)=>{console.log(err)})
+  }).catch((err)=>{console.log(err)
+       		 notify1(err)})
 }
+function notify(){
+ 
+    toast.success("Booked Successfully", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      // autoClose:false
+      });
+  }
+
+  function notify1(err)
+  {
+	toast.error(err, {
+	  position: "bottom-right",
+	  autoClose: 5000,
+	  hideProgressBar: false,
+	  closeOnClick: true,
+	  pauseOnHover: true,
+	  draggable: true,
+	  progress: undefined,
+	  theme: "colored",
+	  })
+  }
   return (
 	<div className='service'>
+ <ToastContainer/>
 	<div className='services_form container'>
 		<div className='service_header'>
 	  <form className='serviceform' onSubmit={handleSubmit}>
