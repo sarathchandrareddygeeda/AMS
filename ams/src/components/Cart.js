@@ -4,6 +4,7 @@ import { useState } from "react";
 import "../styles/preloader.css";
 import "../styles/cart.css";
 import { useTheme } from "./themeContext";
+import { Link } from "react-router-dom";
 function Cart1() {
   const [result, setResult] = useState(" ");
   const themer = useTheme();
@@ -52,9 +53,19 @@ function Cart1() {
   } else {
     return (
       <div>
-        <div class="d-flex justify-content-between align-items-center mb-4">
-          <h3 class="k1  align-items-center text-black ">Shopping Cart</h3>
+        <div class="d-flex justify-content-between align-items-center mb-4" align="center">
+          <h3 class="cart_shopp">Shopping Cart</h3>
         </div>
+        <div class="cart_probut" align="center">
+                                <a href="#!" class="text-danger">
+                                  <i class="fas fa-trash fa-lg">
+                                  <button class="btn btn-info" type="button" >
+                                    <Link class="cart_buybut"to="/custinfo">Proceed</Link>
+                                  </button>
+                                   <br />
+                                  </i>
+                                  </a>
+                              </div>
         {result.map((obj) => {
           if (obj.email === themer.email) {
             return (
@@ -87,7 +98,17 @@ function Cart1() {
                                   <button class="btn btn-primary" type="button" onClick={() => handleDelete(obj._id)}>
                                   Remove
                                   </button>
-                        
+                                   <br />
+                                  </i>
+                                  </a>
+                              </div>
+                              <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                                <a href="#!" class="text-danger">
+                                  <i class="fas fa-trash fa-lg">
+                                  <button class="btn btn-primary" type="button" >
+                                    <Link class="cart_buybut"to="/custinfo">Buy Now</Link>
+                                  </button>
+                                   <br />
                                   </i>
                                   </a>
                               </div>
@@ -100,6 +121,7 @@ function Cart1() {
                 </section>
               </div>
             );
+            
           } 
         })}
       </div>

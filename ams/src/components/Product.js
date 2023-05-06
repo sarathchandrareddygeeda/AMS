@@ -4,6 +4,8 @@ import { useState } from "react";
 import axios from "axios";
 import { Navigate , Link} from 'react-router-dom';
 import { useTheme } from "./themeContext";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 export default function Product({ children }) {
   const[state, setState]=useState(1)
   const [result, setResult] = useState(" ");
@@ -20,7 +22,33 @@ export default function Product({ children }) {
   {
     getProducts()
   },[state])
-
+  function notifycart(){
+ 
+    toast.success("Added to cart Successfully", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      // autoClose:false
+      });
+  }
+  function notifycart1()
+{
+  toast.error("Something went wrong Try again", {
+    position: "bottom-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+    })
+}
   function getProducts() {
     axios.get("http://localhost:6969/api/card", {
         params: {}
@@ -47,8 +75,12 @@ const handleCart= (event, objid,objprice,objname,objimage)=>
     image:objimage,
 }).then((response)=>{
   console.log(response.data);
+  notifycart();
   setRes1(response.data)
-}).catch((err)=>{console.log(err)})
+}).catch((err)=>{console.log(err)
+
+  notifycart1();
+})
 }
   const theme = useTheme();
   if(theme.login===true)

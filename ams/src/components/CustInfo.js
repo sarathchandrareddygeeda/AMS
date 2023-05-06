@@ -135,9 +135,11 @@ export default function CustInfo() {
             </label>
           </div>
           <hr />
+          <div align="center">
           <button class="button" type="submit" >
           Continue
         </button>
+        </div>
         </form>
       </div>
     </div>

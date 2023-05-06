@@ -69,9 +69,9 @@ const navigate = useNavigate();
                     <label>UserName</label>
                     <input type="text" placeholder="USERNAME" name='username'/>
                     <label>Email</label>
-                    <input type="email" placeholder="EMAIL" name='email' />
+                    <input type="email" placeholder="EMAIL" pattern="[^ @]*@[^ @]*" title="Please enter a valid email address"name='email' />
                     <label>Password</label>
-                    <input type="password" placeholder="PASSWORD" name='password'/>
+                    <input type="password" placeholder="PASSWORD" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" name='password'/>
                     <button class="login6_submit">Register</button>
                   </form>
                 </div>

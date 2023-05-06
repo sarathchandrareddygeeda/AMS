@@ -58,7 +58,7 @@ function getProducts() {
                                 <tr>
                                   <td>{obj.name}</td>
                                   <td>{obj.price}</td>
-                                  <td>{obj.image}</td>
+                                  <td><img src={obj.image} /></td>
                                 </tr>
                                 )
                             }

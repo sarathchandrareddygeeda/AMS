@@ -6,6 +6,9 @@ import { useState } from "react";
 import axios from "axios";
 import { Navigate , Link} from 'react-router-dom';
 import { useTheme } from "./themeContext";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
 export default function BikeParts({ children }) {
   const[state, setState]=useState(1)
   const [result, setResult] = useState(" ");
@@ -22,7 +25,33 @@ export default function BikeParts({ children }) {
   {
     getProducts()
   },[state])
-
+function notifybcart(){
+ 
+    toast.success("Added to cart Successfully", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      // autoClose:false
+      });
+  }
+  function notifybcart1()
+{
+  toast.error("Something went wrong Try again", {
+    position: "bottom-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+    })
+}
   function getProducts() {
     axios.get("http://localhost:6969/api/card-spare", {
         params: {}
@@ -88,7 +117,7 @@ const handleCart= (event, objid,objprice,objname,objimage)=>
                   <h3>₹{obj.price}</h3>
 
                   <button type="button" class="btn btn-primary " onClick={(e)=>handleCart(e, obj._id,obj.price,obj.name,obj.image)}  name="productId">
-                  <Link to='/cart'><small  >Add to Cart</small></Link>
+                <small  >Add to Cart</small>
                   </button>
                   {/* <button type="button" class="btn btn-primary " onClick={(e)=>handProductId(e, obj._id) } name="productId">
                   <Link to='/custinfo'><small  >Buy Now</small></Link>

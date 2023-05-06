@@ -46,3 +46,15 @@
 {
     width: 30px;
 }
+.proceed_btn a{
+  color: white;
+  width: 200px;
+  height: 50px;
+}
+.cart_buybut{
+  color: white;
+}
+.cart_shopp{
+  left:725px;
+  position: relative;
+}
