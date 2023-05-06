@@ -20,6 +20,7 @@ import Servicing from "./admin/Servicing"
 import Producti from "./admin/AdminProduct"
 import AddSpare from "./components/AddSpare"
 import UploadSelect from "./components/UploadSelect";
+import RP from "./components/RP";
 function App() {
 
   return (
@@ -47,6 +48,7 @@ function App() {
           <Route path="customers" element={<Customer />} />
           <Route path="serviceinfo" element={<Servicing />} />
           <Route path="productinfo" element={<Producti />} />
+          <Route path="rp" element={<RP />} />
           </Routes>
         <ToastContainer/>
       </ThemeProvider>
