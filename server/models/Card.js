@@ -12,3 +12,4 @@ const Card = new mongoose.Schema(
 );
 
 mongoose.model("ImageDetails", Card);
+

@@ -16,6 +16,8 @@ import Dashboard from "./components/Dashboard";
 import CustInfo from "./components/CustInfo";
 import { ToastContainer } from "react-toastify";
 import Customer from "./admin/Customer"
+import Servicing from "./admin/Servicing"
+import Producti from "./admin/AdminProduct"
 function App() {
 
   return (
@@ -39,6 +41,8 @@ function App() {
           <Route path="dash" element={<Dashboard />} />
           <Route path="custinfo" element={<CustInfo />} />
           <Route path="customers" element={<Customer />} />
+          <Route path="serviceinfo" element={<Servicing />} />
+          <Route path="productinfo" element={<Producti />} />
         </Routes>
         <ToastContainer/>
       </ThemeProvider>

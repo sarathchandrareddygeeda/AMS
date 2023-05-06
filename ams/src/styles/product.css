@@ -135,6 +135,7 @@
     box-shadow: 0px 0px 5px ;
     border-radius: 10px;
     border-color: #fff;
+    color: #ffffff;
 }
 .product_dark .product_card
 {
@@ -201,8 +202,8 @@
     text-align: center;
     cursor: pointer;
     outline: none;
-    color: #000000;
-    background-color: #0091ff;
+    color: #ffffff;
+    background-color: #000000;
     border: none;
     border-radius: 10px;
     box-shadow: 0 5px #fffefe;
