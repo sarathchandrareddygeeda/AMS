@@ -26,7 +26,7 @@ const navigate = useNavigate();
       navigate("/login");
 
     }).catch((err)=>{console.log(err)
-    notify1(err)})
+    notify1()})
   }
   function notify(){
  
@@ -42,9 +42,9 @@ const navigate = useNavigate();
       // autoClose:false
       });
   }
-  function notify1(err)
+  function notify1()
 {
-  toast.error(err, {
+  toast.error("Email already exists,Try Different email", {
     position: "bottom-right",
     autoClose: 5000,
     hideProgressBar: false,

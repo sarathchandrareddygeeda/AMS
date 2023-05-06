@@ -1,13 +1,8 @@
 import React from "react";
 import "../styles/uploadselect.css";
-import user from "../media/userimg1.png";
-import customer from "../media/customerimg1.png";
 import up1 from "../media/uploadselect1.png";
 import up2 from "../media/uploadselect2.png";
 import { Link } from "react-router-dom";
-import upload from "../media/upload.png";
-import service1 from "../media/services1.png";
-import product1 from "../media/products12.png";
 export default function UploadSelect() {
   return (
     <>

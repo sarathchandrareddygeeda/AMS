@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import '../styles/services.css'
 import axios from "axios"
+import { Navigate , Link} from 'react-router-dom';
+import { useTheme } from "./themeContext";
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 export default function Services() {
 	const [res, setRes] = useState(null);
+	const themer = useTheme();
 	const handleSubmit =(event)=>
 {
   event.preventDefault();
@@ -50,6 +53,9 @@ function notify(){
 	  theme: "colored",
 	  })
   }
+  const theme = useTheme();
+  if(theme.login===true)
+  {
   return (
 	<div className='service'>
  <ToastContainer/>
@@ -88,4 +94,10 @@ function notify(){
 	</div>
 	</div>
   )
+}
+if(theme.login===false){
+  return(
+    <Navigate to="/login" />
+  )
+}
 }

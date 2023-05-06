@@ -106,6 +106,7 @@ function notify1()
                     <button class="login6_submit" value={login}>
                       Login
                     </button>
+                    <Link class="forgot_link"to='/forgotp' >forgotpassword?</Link>
                   </form>
                 </div>
               </div>
