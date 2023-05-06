@@ -31,6 +31,7 @@ const service = require('./routes/service')
 const admin = require("./routes/admin")
 const custinf=require('./routes/custdel')
 const spareroute=require('./routes/sparepartsroute')
+const resetpass=require('./routes/resetpassword')
 app.use('/api/auth', authRoutes);
 app.use('/api/register', registerRoutes);
 app.use('/api', upload);
@@ -39,6 +40,7 @@ app.use('/api',service)
 app.use('/api',admin)
 app.use('/api',custinf);
 app.use('/api',spareroute);
+app.use('/api',resetpass);
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
