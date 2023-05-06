@@ -52,7 +52,7 @@
 	<div className='services_form container'>
 		<div className='service_header'>
       <form className="serviceform" onSubmit={uploadImage}>
-      <h1 className='servicehead'>Add Products</h1>
+      <h1 className='servicehead'>Add Bikes</h1>
       <br />
       <div className="upload_head">
         <div className="upload_inner">
@@ -62,7 +62,7 @@
                       <br />
         <label className="services_label">Price</label>
         <br />
-                      <input type="text" className="serviceinput" placeholder="price" name='price' />
+                      <input type="number" className="serviceinput" placeholder="price" name='price' />
                       <br />
                       <label className="services_label">Upload Image</label>
                       <br />

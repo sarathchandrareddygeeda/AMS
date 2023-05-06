@@ -1,10 +1,12 @@
 import { useState } from "react";
 import React from "react";
 import "../styles/custinfo.css";
+import { ToastContainer, toast } from 'react-toastify';
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 export default function CustInfo() {
   const [res, setRes] = useState(null);
-
+  const navigate = useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -21,18 +23,33 @@ export default function CustInfo() {
       })
       .then((response) => {
         console.log(response.data);
+        successful();
+        navigate("/");
         setRes(response.data);
       })
       .catch((err) => {
         console.log(err);
       });
   };
-
+  function successful(){
+ 
+    toast.success("Order Placed Successfully", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      // autoClose:false
+      });
+  }
   return (
     <div className="u">
+      <h1>Shipping Details</h1>
       <div class="container">
-        <h1>Shipping</h1>
-        <p>Please enter your shipping details.</p>
+        <h2>Please enter your details.</h2>
         <hr />
         <form onSubmit={handleSubmit}>
           <div class="fields fields--2">

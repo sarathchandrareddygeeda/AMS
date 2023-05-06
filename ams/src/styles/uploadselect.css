@@ -1,0 +1,105 @@
+@keyframes slideInRight {
+    100% {
+      transform: translateY(0%);
+    }
+    0% {
+      transform: translateY(100%);
+    }
+  }
+.upload_center{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: contents;
+    margin-left: 1000px;
+}
+.uploads_white .btn{
+    height: 40px;
+    width: 150px;
+    box-shadow: 0px 0px 5px ;
+    border-radius: 10px;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
+.uploads_white .upload_card
+{
+    border:solid rgb(255, 255, 255);
+    margin: 30px;
+    /* background-color: rgb(255, 255, 255); */
+    background: transparent;
+    width: 200px;
+    min-height: auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow:0 3px 10px;
+    
+}
+.uploads_white .upload_card:hover{
+    cursor: pointer;
+    transform: scale(1.09);
+    transition: all 0.7s ease; 
+}
+
+.uploads_white .upload_image img
+{
+    align-items: center;
+    justify-content: center;
+    margin-left: 7%;
+    margin-right: auto;
+    width: 90%;
+    height: 90%;
+    font-size: 50%;
+}
+.uploads_white .upload_description
+{
+    align-items: center;
+    text-align: center;
+    position: relative;
+    width:97% ;
+    height: 20%;
+    margin-top: 20px;
+    padding: 2px;
+    font-size:medium;
+    font-weight: bolder;
+}
+
+
+.uploads_white .upload_main-content {
+    margin-left: 30%;
+    margin-right: auto;
+    margin-top: 10%;
+}
+
+
+.uploads_white .upload_grid
+{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(325px,100px));
+}
+
+.uploads_white .upload_button
+{   
+    
+    padding: 5px 10px;
+   
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #0091ff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px #000000;
+}
+.uploads_white .upload_button:hover {
+    background-color: #0400ff;
+    box-shadow: 5px;
+}
+
+.uploads_white .upload_button:active {
+  background-color: #0098f7;
+  box-shadow: 0 5px #000000;
+  transform: translateY(4px);
+}

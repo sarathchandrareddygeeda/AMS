@@ -9,7 +9,13 @@ export default function Product({ children }) {
   const [result, setResult] = useState(" ");
   var [up, setUp]=useState([]);
   const [res1, setRes1] = useState();
+  const [pid,setpid] = useState(null);
   const themer = useTheme();
+  const handProductId= (event, objid)=>{
+    console.log(objid)
+    setpid(objid)
+    themer.handProductId(objid);
+  }
   useEffect(()=>
   {
     getProducts()
@@ -77,11 +83,14 @@ const handleCart= (event, objid,objprice,objname,objimage)=>
               <div class="product_description">
                     {obj.name}
                 <div class="products_description_buttons">
-                  <h3>{obj.price}</h3>
+                  <h3>₹{obj.price}</h3>
 
                   <button type="button" class="btn btn-primary " onClick={(e)=>handleCart(e, obj._id,obj.price,obj.name,obj.image)}  name="productId">
-                  <Link to='/custinfo'><small  >Buy Now</small></Link>
+                 <small  >Buy Now</small>
                   </button>
+                  {/* <button type="button" class="btn btn-primary " onClick={(e)=>handProductId(e, obj._id) } name="productId">
+                  <Link to='/custinfo'><small  >Buy Now</small></Link>
+                  </button> */}
                 </div>
               </div>
             </div>

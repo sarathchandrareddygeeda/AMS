@@ -23,17 +23,25 @@
     font-family: "Inter var", sans-serif;
   }
 }
-
+.u {
+  width: 1652px;
+  height: 800px;
+  background: linear-gradient(to right,#7EE8FA 0%,#EEC0C6 100%);
+}
 .u body {
   margin: 0;
+  background: linear-gradient(to right,#7EE8FA 0%,#EEC0C6 100%);
 }
 
 .u h1 {
   margin-bottom: 1rem;
+  margin-left: 670px;
 }
-
+.u h2{
+  margin-left: 175px;
+}
 .u p {
-  color: var(--color-gray);
+  color: #000;
 }
 
 .u hr {
@@ -45,10 +53,17 @@
 }
 
 .u .container {
-  max-width: 40rem;
-  padding: 10vw 2rem 0;
+  max-width: 43rem;
+  padding: 3vw 2rem 0;
   margin: 0 auto;
   height: 100vh;
+  background:transparent;
+  border: 4px solid white;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  color: #000;
+  border-radius: 25px;
 }
 
 .u .form {
@@ -60,13 +75,13 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--color-lighter-gray);
+  border: 2px solid white;
   padding: .5rem;
   border-radius: .25rem;
 }
 
 .u .field__label {
-  color: var(--color-gray);
+  color: #000;
   font-size: 0.6rem;
   font-weight: 300;
   text-transform: uppercase;
@@ -107,7 +122,7 @@
   font-weight: 600;
   display: block;
   color: #fff;
-  width: 100%;
+  width: 50%;
   padding: 1rem;
   border-radius: 0.25rem;
   border: 0;

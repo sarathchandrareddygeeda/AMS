@@ -6,10 +6,12 @@ export const ThemeProvider = ({children}) => {
     const [theme,setTheme] = useState(false)
     const [login ,setLogin] =useState(false)
     const [email,setEmail]=useState(null)
+    const [productId,setProductId] = useState(null)
      const hand = ()=>
  {
    if(theme===false){
     setTheme(true);
+    
    }
    else{
      setTheme(false);
@@ -24,8 +26,11 @@ export const ThemeProvider = ({children}) => {
     setLogin(false)
     setEmail(null)
   }
+  const handProductId=(k)=>{
+    setProductId(k)
+  }
     return(
-        <ThemeContext.Provider value={{theme,hand,login,handlogin,handlogout,email}}>{children}</ThemeContext.Provider>
+        <ThemeContext.Provider value={{theme,hand,login,handlogin,handlogout,handProductId,productId,email}}>{children}</ThemeContext.Provider>
     )
 }
 export const useTheme = () => {

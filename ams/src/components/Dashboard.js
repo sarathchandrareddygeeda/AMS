@@ -62,7 +62,7 @@ export default function Dashboard() {
                 <div class="products_description_buttons">
                   {/* <h3>{obj.price}</h3> */}
                 <br />
-                <Link to='/upload'>
+                <Link to='/uploadselect'>
                   <button
                     type="button"
                     class="btn btn-primary "

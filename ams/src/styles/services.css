@@ -36,6 +36,7 @@
     border: 4px solid rgb(0, 0, 0);
     border-radius: 50px;
     box-sizing: border-box;
+    box-shadow: #3f3939;
     left:-50px;
     color: rgb(0, 0, 0);
 }
@@ -43,8 +44,8 @@
     font-style: italic;
     font-weight: bolder;
     position: relative;
-    text-align: right;
-    padding-right: 75px;
+    text-align: center;
+    margin-left: 45px;
 }
 .services_label{
     position: relative;
@@ -55,11 +56,11 @@
     display:inline-block;
     left:150px;
     padding-right: 75px;
-    color: #3f3939;
+    color: #000000;
 }
 .serviceinput{
-    border: 2px solid black;
-    border-radius: 50px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
     margin-left: 75px;
     width: 300px;
     height: 50px;

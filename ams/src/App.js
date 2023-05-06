@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Router } from "react-router-dom";
 import Login from "./components/Login";
 import Home from "./components/Home";
 import Nav from "./components/Nav";
@@ -18,6 +18,8 @@ import { ToastContainer } from "react-toastify";
 import Customer from "./admin/Customer"
 import Servicing from "./admin/Servicing"
 import Producti from "./admin/AdminProduct"
+import AddSpare from "./components/AddSpare"
+import UploadSelect from "./components/UploadSelect";
 function App() {
 
   return (
@@ -34,6 +36,8 @@ function App() {
           <Route path="spareparts" element={<BikeParts />} />
           <Route path="register" element={<Register />} />
           <Route path="upload" element={<Card />} />
+          <Route path="uploadspare" element={<AddSpare />} />
+          <Route path="uploadselect" element={<UploadSelect />} />
           <Route path="cart" element={<Cart />} />
           <Route path="*" element={<NoPage />} />
           <Route path="services" element={<Services />} />
@@ -43,7 +47,7 @@ function App() {
           <Route path="customers" element={<Customer />} />
           <Route path="serviceinfo" element={<Servicing />} />
           <Route path="productinfo" element={<Producti />} />
-        </Routes>
+          </Routes>
         <ToastContainer/>
       </ThemeProvider>
     </>
