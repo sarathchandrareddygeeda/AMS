@@ -19,6 +19,7 @@ import Customer from "./admin/Customer"
 import Servicing from "./admin/Servicing"
 import Producti from "./admin/AdminProduct"
 import AddSpare from "./components/AddSpare"
+import Profile from "./components/Profile";
 import UploadSelect from "./components/UploadSelect";
 function App() {
 
@@ -47,6 +48,7 @@ function App() {
           <Route path="customers" element={<Customer />} />
           <Route path="serviceinfo" element={<Servicing />} />
           <Route path="productinfo" element={<Producti />} />
+          <Route path="profile" element={<Profile/>} />
           </Routes>
         <ToastContainer/>
       </ThemeProvider>

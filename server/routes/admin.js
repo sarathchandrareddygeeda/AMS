@@ -18,6 +18,11 @@ router.get("/admin-user", async (req, res) => {
     console.log(j);
     res.send(j);
   });
+  router.get("/profile-user", async (req, res) => {
+    const result = await images.find().toArray();
+    console.log(result);
+    res.send(result);
+  });
   router.get("/admin-custinfo", async (req, res) => {
     const result = await cust.find().toArray();
     const j = JSON.stringify(result)

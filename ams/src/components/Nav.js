@@ -142,11 +142,11 @@ export default function Nav({ children }) {
                 </Link>
                 <ul className="dropdown-menu">
                 <li>
-                    <Link className="dropdown-item" to="/bikes">
-                   Account
+                    <Link className="dropdown-item" to="/profile">
+                   Profile
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link className="dropdown-item" to="/bikes">
                     Order History
                     </Link>
@@ -155,7 +155,7 @@ export default function Nav({ children }) {
                     <Link className="dropdown-item" to="/bikes">
                     Service History
                     </Link>
-                  </li>
+                  </li> */}
                   
                   <li>
                     <Link className="dropdown-item" to="/login" onClick={handlelogout}>

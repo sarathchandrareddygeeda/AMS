@@ -5,10 +5,13 @@ import "../styles/preloader.css";
 import "../styles/cart.css";
 import { useTheme } from "./themeContext";
 import { Link } from "react-router-dom";
+import { Navigate} from 'react-router-dom';
 function Cart1() {
   const [result, setResult] = useState(" ");
   const themer = useTheme();
   const [sum,setSum]=useState(0)
+
+
   useEffect(() => {
     getProducts1();
   });
@@ -38,6 +41,9 @@ function Cart1() {
         console.log(err);
       });
   }
+  const theme = useTheme();
+  if(theme.login===true)
+  {
   if (result === " ") {
     return (
       <div className="perloader">
@@ -127,6 +133,11 @@ function Cart1() {
       </div>
     );
   }
-
+}
+if(theme.login===false){
+  return(
+    <Navigate to="/login" />
+  )
+}
 }
 export default Cart1;
