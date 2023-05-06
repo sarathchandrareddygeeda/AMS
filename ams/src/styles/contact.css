@@ -12,3 +12,6 @@
     background-color: rgb(114, 114, 114);
     color: rgb(0, 0, 0);
 }
+.form-control {
+    width: 80%;
+  }
