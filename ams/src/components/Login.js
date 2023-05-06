@@ -71,7 +71,6 @@ function notify(){
       draggable: true,
       progress: undefined,
       theme: "colored",
-      // autoClose:false
       });
   }
 function notify1()
@@ -106,7 +105,7 @@ function notify1()
                     <button class="login6_submit" value={login}>
                       Login
                     </button>
-                    <Link class="forgot_link"to='/forgotp' >forgotpassword?</Link>
+                    <Link class="forgot_link"to='/rp'>forgotpassword?</Link>
                   </form>
                 </div>
               </div>

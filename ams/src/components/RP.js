@@ -1,7 +1,9 @@
 import React ,{useRef} from "react";
 import emailjs from '@emailjs/browser'
 import axios from "axios";
-import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useState} from "react";
+
 export default function RP() {
     const form = useRef();
   const [otp,setOpt]=useState(0);
@@ -37,7 +39,7 @@ export default function RP() {
         <input type="email"  onChange={gen} name="user_email" />
         <input hidden type="text" name="otp" value={otp}></input>
 {        console.log(otp)
-}        <button type="submit" >Click me </button>
+}        <button type="submit" ><Link to="/otpvalid"> Click me </Link></button>
     </form>
     </div>
   );

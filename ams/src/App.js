@@ -22,6 +22,7 @@ import AddSpare from "./components/AddSpare"
 import Profile from "./components/Profile";
 import UploadSelect from "./components/UploadSelect";
 import RP from "./components/RP";
+import OtpValidation from "./components/OtpValidation";
 function App() {
 
   return (
@@ -51,6 +52,7 @@ function App() {
           <Route path="productinfo" element={<Producti />} />
           <Route path="rp" element={<RP />} />
           <Route path="profile" element={<Profile/>} />
+          <Route path="otpvalid" element={<OtpValidation />} />
           </Routes>
         <ToastContainer/>
       </ThemeProvider>
