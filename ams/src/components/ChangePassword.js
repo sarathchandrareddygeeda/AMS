@@ -1,40 +1,37 @@
-import React from 'react'
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useTheme } from "./themeContext";
 
 export default function ChangePassword() {
+  const [res, setRes] = useState(null);
+  const theme = useTheme();
+    const navigate = useNavigate();
+  const handlechangesubmit =(event) =>{
+    console.log(theme.reset)
+      event.preventDefault();
+      const data = new FormData(event.currentTarget);
+      axios.post("http://localhost:6969/api/modifypass", {
+      email:theme.reset,
+      password: data.get("password")
+    })
+    .then((response) => {
+      console.log(response.data);
+      setRes(response.data);
+        // navigate("/");
+      }
+    )
+    .catch((err) => {
+      console.log(err);
+    }); 
+  }
   return (
     <div>
-         <div className='service'>
-	<div className='services_form container'>
-		<div className='service_header'>
-      <form className="serviceform" onSubmit={uploadImage}>
-      <h1 className='servicehead'>Add Bikes</h1>
-      <br />
-      <div className="upload_head">
-        <div className="upload_inner">
-        <label className="services_label">Description</label>
-        <br />
-                      <input type="text" className="serviceinput" placeholder="Name" name='name' />
-                      <br />
-        <label className="services_label">Price</label>
-        <br />
-                      <input type="number" className="serviceinput" placeholder="price" name='price' />
-                      <br />
-                      <label className="services_label">Upload Image</label>
-                      <br />
-          <input accept="image/*" type="file" className="serviceinput" onChange={covertToBase64} />
-          {image === "" || image === null ? (
-            ""
-          ) : (
-            <img width={100} height={100} src={image} />
-          )}
-          <br />
-          <button type="submit" className="service_but">Upload</button>
-        </div>
-      </div>
+      <form onSubmit={handlechangesubmit}>
+        <label>Enter new Password</label>
+        <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" name='password'/>
+        <button type="submit" >click me</button>
       </form>
-</div>
-</div>
-</div>
     </div>
   )
 }

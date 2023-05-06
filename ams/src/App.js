@@ -23,6 +23,7 @@ import Profile from "./components/Profile";
 import UploadSelect from "./components/UploadSelect";
 import RP from "./components/RP";
 import OtpValidation from "./components/OtpValidation";
+import ChangePassword from "./components/ChangePassword";
 function App() {
 
   return (
@@ -53,6 +54,7 @@ function App() {
           <Route path="rp" element={<RP />} />
           <Route path="profile" element={<Profile/>} />
           <Route path="otpvalid" element={<OtpValidation />} />
+          <Route path="changep" element={<ChangePassword />} />
           </Routes>
         <ToastContainer/>
       </ThemeProvider>
