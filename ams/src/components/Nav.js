@@ -51,39 +51,11 @@ export default function Nav({ children }) {
                     Home
                 </Link>
               </li>
-              <li className="nav-item dropdown">
-                <Link
-                  className="nav-link dropdown-toggle"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Products
+                <li className="nav-item">
+                <Link className="navk nav-link" to="/bikes">
+                  Product
                 </Link>
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link className="dropdown-item" to="/bikes">
-                      Bike
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/spareparts">
-                      Spare Parts
-                    </Link>
-                  </li>
-                  {/* <li>
-                    <Link className="dropdown-item" to="/">
-                      Accessories
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/">
-                      Repair Tools
-                    </Link>
-                  </li> */}
-                </ul>
               </li>
-
               <li className="nav-item">
                 <Link className="navk nav-link" to="/cart">
                   🛒Cart
