@@ -58,12 +58,12 @@ const navigate = useNavigate();
   return (
     <div>
       <ToastContainer/>
-      <div class={theme.theme === true ? "login6_dark" : "login6_white"} >
-        <div class="register_header">
-          <div class="login6_login">
-            <div class="login6_login_box">
-              <div class="login6_left">
-                <div class="login6_contact_register">
+      <div className={theme.theme === true ? "login6_dark" : "login6_white"} >
+        <div className="register_header">
+          <div className="login6_login">
+            <div className="login6_login_box">
+              <div className="login6_left">
+                <div className="login6_contact_register">
                   <form onSubmit={handleSubmit}>
                     <h3>Register</h3>
                     <label>UserName</label>
@@ -72,14 +72,14 @@ const navigate = useNavigate();
                     <input type="email" placeholder="EMAIL" pattern="[^ @]*@[^ @]*" title="Please enter a valid email address"name='email' />
                     <label>Password</label>
                     <input type="password" placeholder="PASSWORD" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" name='password'/>
-                    <button class="login6_submit">Register</button>
+                    <button className="login6_submit">Register</button>
                   </form>
                 </div>
               </div>
-              <div class="login6_right-inductor text-center justify-content-center">
+              <div className="login6_right-inductor text-center justify-content-center">
                 <img src={cart} alt="" />
                 <p className="primary text-decoration-underline">Already a Member?</p>
-                <Link class="btn btn-primary text-wrap text-center" to="/login">Login</Link>
+                <Link className="btn btn-primary text-wrap text-center" to="/login">Login</Link>
               </div>
             </div>
           </div>

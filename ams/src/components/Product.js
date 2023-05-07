@@ -88,7 +88,7 @@ const handleCart= (event, objid,objprice,objname,objimage)=>
     if(result===" "){
       return(
         <div className='perloader'>
-        <div class="loader">
+        <div className="loader">
           <span></span>
           <span></span>
           <span></span>
@@ -105,22 +105,22 @@ const handleCart= (event, objid,objprice,objname,objimage)=>
           className={theme.theme === true ? "product_dark" : "product_white"}
         >
           <div className="product_header">
-          <div class="product_grid product_main-content ">
+          <div className="product_grid product_main-content ">
           {
         result.map((obj) => (
-            <div class="product_card">
-              <div class="product_image">
+            <div className="product_card">
+              <div className="product_image">
                 <img src={obj.image} alt="tree" />
               </div>
-              <div class="product_description">
+              <div className="product_description">
                     {obj.name}
-                <div class="products_description_buttons">
+                <div className="products_description_buttons">
                   <h3>₹{obj.price}</h3>
 
-                  <button type="button" class="btn btn-primary " onClick={(e)=>handleCart(e, obj._id,obj.price,obj.name,obj.image)}  name="productId">
+                  <button type="button" className="btn btn-primary " onClick={(e)=>handleCart(e, obj._id,obj.price,obj.name,obj.image)}  name="productId">
                  <small  >Buy Now</small>
                   </button>
-                  {/* <button type="button" class="btn btn-primary " onClick={(e)=>handProductId(e, obj._id) } name="productId">
+                  {/* <button type="button" className="btn btn-primary " onClick={(e)=>handProductId(e, obj._id) } name="productId">
                   <Link to='/custinfo'><small  >Buy Now</small></Link>
                   </button> */}
                 </div>

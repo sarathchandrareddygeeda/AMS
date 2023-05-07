@@ -10,20 +10,20 @@ export default function Dashboard() {
     <div className="admin_body">
     <div className={"product_white"}>
       <div className="product_header">
-        <div class="product_grid product_main-content ">
+        <div className="product_grid product_main-content ">
           
-            <div class="product_card">
-              <div class="product_image">
+            <div className="product_card">
+              <div className="product_image">
                 <img src={user} alt="tree" />
               </div>
-              <div class="product_description">
+              <div className="product_description">
                 {/* {obj.name} */}
-                <div class="products_description_buttons">
+                <div className="products_description_buttons">
                   {/* <h3>{obj.price}</h3> */}
                 <Link to='/admin-user'>
                   <button
                     type="button"
-                    class="btn btn-primary "
+                    className="btn btn-primary "
                     name="productId"
                   >
                     <small>Users</small>
@@ -32,19 +32,19 @@ export default function Dashboard() {
                 </div>
               </div>
             </div>
-            <div class="product_card">
-              <div class="product_image">
+            <div className="product_card">
+              <div className="product_image">
                 <img src={customer} alt="tree" />
               </div>
-              <div class="product_description">
+              <div className="product_description">
                 {/* {obj.name} */}
-                <div class="products_description_buttons">
+                <div className="products_description_buttons">
                   {/* <h3>{obj.price}</h3> */}
                 <br />
                 <Link to='/customers'>
                   <button
                     type="button"
-                    class="btn btn-primary "
+                    className="btn btn-primary "
                     name="productId"
                   >
                     <small>Customers</small>
@@ -53,19 +53,19 @@ export default function Dashboard() {
                 </div>
               </div>
             </div>
-            <div class="product_card">
-              <div class="product_image">
+            <div className="product_card">
+              <div className="product_image">
                 <img src={upload} alt="tree" />
               </div>
-              <div class="product_description">
+              <div className="product_description">
                 {/* {obj.name} */}
-                <div class="products_description_buttons">
+                <div className="products_description_buttons">
                   {/* <h3>{obj.price}</h3> */}
                 <br />
                 <Link to='/uploadselect'>
                   <button
                     type="button"
-                    class="btn btn-primary "
+                    className="btn btn-primary "
                     name="productId"
                   >
                     <small>Upload</small>
@@ -74,19 +74,19 @@ export default function Dashboard() {
                 </div>
               </div>
             </div>
-            <div class="product_card">
-              <div class="product_image">
+            <div className="product_card">
+              <div className="product_image">
                 <img src={service1} alt="tree" />
               </div>
-              <div class="product_description">
+              <div className="product_description">
                 {/* {obj.name} */}
-                <div class="products_description_buttons">
+                <div className="products_description_buttons">
                   {/* <h3>{obj.price}</h3> */}
                 <br />
                 <Link to='/serviceinfo'>
                   <button
                     type="button"
-                    class="btn btn-primary "
+                    className="btn btn-primary "
                     name="productId"
                   >
                     <small>Service History</small>
@@ -95,19 +95,19 @@ export default function Dashboard() {
                 </div>
               </div>
             </div>
-            <div class="product_card">
-              <div class="product_image">
+            <div className="product_card">
+              <div className="product_image">
                 <img src={product1} alt="tree" />
               </div>
-              <div class="product_description">
+              <div className="product_description">
                 {/* {obj.name} */}
-                <div class="products_description_buttons">
+                <div className="products_description_buttons">
                   {/* <h3>{obj.price}</h3> */}
                 <br />
                 <Link to='/productinfo'>
                   <button
                     type="button"
-                    class="btn btn-primary "
+                    className="btn btn-primary "
                     name="productId"
                   >
                     <small>Products</small>

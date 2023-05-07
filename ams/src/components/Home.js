@@ -31,7 +31,7 @@ export default function Home(children) {
   //     }
   // }, 5000);
   return (
-    <div class={theme.theme === true ? "home_dark" : "home_white"} >
+    <div className={theme.theme === true ? "home_dark" : "home_white"} >
       <div className="slider">
         <div className="slides">
           <input type="radio" name="radio-btn" id="radio1" />

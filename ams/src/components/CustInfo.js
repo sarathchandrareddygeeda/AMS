@@ -48,95 +48,95 @@ export default function CustInfo() {
   return (
     <div className="u">
       <h1>Shipping Details</h1>
-      <div class="container">
+      <div className="container">
         <h2>Please enter your details.</h2>
         <hr />
         <form onSubmit={handleSubmit}>
-          <div class="fields fields--2">
-            <label class="field">
-              <span class="field__label" for="firstname">
+          <div className="fields fields--2">
+            <label className="field">
+              <span className="field__label" for="firstname">
                 First name
               </span>
               <input
-                class="field__input"
+                className="field__input"
                 type="text"
                 id="firstname"
                 name="firstname"
               />
             </label>
-            <label class="field">
-              <span class="field__label" for="lastname">
+            <label className="field">
+              <span className="field__label" for="lastname">
                 Last name
               </span>
               <input
-                class="field__input"
+                className="field__input"
                 type="text"
                 id="lastname"
                 name="lastname"
               />
             </label>
-            <label class="field">
-              <span class="field__label" for="lastname">
+            <label className="field">
+              <span className="field__label" for="lastname">
                 PhoneNumber
               </span>
               <input
-                class="field__input"
+                className="field__input"
                 type="text"
                 id="lastname"
                 name="pno"
               />
             </label>
           </div>
-          <label class="field">
-            <span class="field__label" for="address">
+          <label className="field">
+            <span className="field__label" for="address">
               Address
             </span>
             <input
-              class="field__input"
+              className="field__input"
               type="text"
               id="address"
               name="address"
             />
           </label>
-          <label class="field">
-            <span class="field__label" for="country">
+          <label className="field">
+            <span className="field__label" for="country">
               Country
             </span>
             <input
-              class="field__input"
+              className="field__input"
               type="text"
               id="country"
               name="country"
             />
           </label>
-          <div class="fields fields--3">
-            <label class="field">
-              <span class="field__label" for="zipcode">
+          <div className="fields fields--3">
+            <label className="field">
+              <span className="field__label" for="zipcode">
                 Zip code
               </span>
               <input
-                class="field__input"
+                className="field__input"
                 type="text"
                 id="zipcode"
                 name="zipcode"
               />
             </label>
-            <label class="field">
-              <span class="field__label" for="city">
+            <label className="field">
+              <span className="field__label" for="city">
                 City
               </span>
-              <input class="field__input" type="text" id="city" name="city" />
+              <input className="field__input" type="text" id="city" name="city" />
             </label>
-            <label class="field">
-              <span class="field__label" for="state">
+            <label className="field">
+              <span className="field__label" for="state">
                 State
               </span>
-              <input class="field__input" type="text" id="state" name="state" />
+              <input className="field__input" type="text" id="state" name="state" />
             </label>
           </div>
           <hr />
           <div align="center">
-          <button class="button" type="submit" >
+          <button className="button" type="submit" >
           Continue
         </button>
         </div>

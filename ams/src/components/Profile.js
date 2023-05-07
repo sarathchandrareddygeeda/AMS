@@ -28,12 +28,12 @@ export default function Profile() {
       <>
     <div className="profile_center">
       <div className={"profile_white"}>
-        <div class="profile_grid profile_main-content ">
-          <div class="profile_card">
-            <div class="profile_image">
+        <div className="profile_grid profile_main-content ">
+          <div className="profile_card">
+            <div className="profile_image">
               <img src={pr1} alt="tree" />
             </div>
-            <div class="profile_description">
+            <div className="profile_description">
             {
                             result.map((obj)=>{
                               if(obj.email===themer.email)

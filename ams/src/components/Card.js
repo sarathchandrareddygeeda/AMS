@@ -116,25 +116,25 @@
   
   //   <h1><strong>File upload</strong> with style and pure CSS</h1>
   
-  //   {/* <div class="form-group">
+  //   {/* <div className="form-group">
   //     <label for="title">Title <span>Use title case to get a better result</span></label>
-  //     <input type="text" name="title" id="title" class="form-controll"/>
+  //     <input type="text" name="title" id="title" className="form-controll"/>
   //   </div>
-  //   <div class="form-group">
+  //   <div className="form-group">
   //     <label for="caption">Caption <span>This caption should be descriptiv</span></label>
-  //     <input type="text" name="caption" id="caption" class="form-controll"/>
+  //     <input type="text" name="caption" id="caption" className="form-controll"/>
   //   </div> */}
   
-  //   <div class="form-group file-area">
+  //   <div className="form-group file-area">
   //         <label for="images">Images <span>Your images should be at least 400x300 wide</span></label>
   //     <input type="file" name="image" id="images" required="required" multiple="multiple" />
-  //     <div class="file-dummy">
-  //       <div class="success">Great, your files are selected. Keep on.</div>
-  //       <div class="default">Please select some files</div>
+  //     <div className="file-dummy">
+  //       <div className="success">Great, your files are selected. Keep on.</div>
+  //       <div className="default">Please select some files</div>
   //     </div>
   //   </div>
   
-  //   <div class="form-group">
+  //   <div className="form-group">
   //     <button type="submit">Upload images</button>
   //   </div>
   

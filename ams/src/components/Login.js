@@ -90,32 +90,32 @@ function notify1()
   return (
     <div>
       <ToastContainer/>
-      <div class={theme.theme === true ? "login6_dark" : "login6_white"}>
-        <div class="login_header">
-          <div class="login6_login">
-            <div class="login6_login_box">
-              <div class="login6_left">
-                <div class="login6_contact">
+      <div className={theme.theme === true ? "login6_dark" : "login6_white"}>
+        <div className="login_header">
+          <div className="login6_login">
+            <div className="login6_login_box">
+              <div className="login6_left">
+                <div className="login6_contact">
                   <form onSubmit={handleSubmit}>
                     <h3>SIGN IN</h3>
                     <label>Email</label>
                     <input type="email" placeholder="Email" name="email" />
                     <label>Password</label>
                     <input type="password" placeholder="PASSWORD" name="password" />
-                    <button class="login6_submit" value={login}>
+                    <button className="login6_submit" value={login}>
                       Login
                     </button>
-                    <Link class="forgot_link"to='/rp'>forgotpassword?</Link>
+                    <Link className="forgot_link"to='/rp'>forgotpassword?</Link>
                   </form>
                 </div>
               </div>
-              <div class="login6_right-inductor text-center justify-content-center">
+              <div className="login6_right-inductor text-center justify-content-center">
                 <img src={cart} alt="" />
                 <p className="primary text-decoration-underline">
                   Not a Member?
                 </p>
                 <Link
-                  class="btn btn-primary text-wrap text-center"
+                  className="btn btn-primary text-wrap text-center"
                   to="/register"
                 >
                   Sign Up

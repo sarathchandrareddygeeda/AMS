@@ -47,7 +47,7 @@ function Cart1() {
   if (result === " ") {
     return (
       <div className="perloader">
-        <div class="loader">
+        <div className="loader">
           <span></span>
           <span></span>
           <span></span>
@@ -59,14 +59,14 @@ function Cart1() {
   } else {
     return (
       <div>
-        <div class="d-flex justify-content-between align-items-center mb-4" align="center">
-          <h3 class="cart_shopp">Shopping Cart</h3>
+        <div className="d-flex justify-content-between align-items-center mb-4" align="center">
+          <h3 className="cart_shopp">Shopping Cart</h3>
         </div>
-        <div class="cart_probut" align="center">
-                                <a href="#!" class="text-danger">
-                                  <i class="fas fa-trash fa-lg">
-                                  <button class="btn btn-info" type="button" >
-                                    <Link class="cart_buybut"to="/custinfo">Proceed</Link>
+        <div className="cart_probut" align="center">
+                                <a href="#!" className="text-danger">
+                                  <i className="fas fa-trash fa-lg">
+                                  <button className="btn btn-info" type="button" >
+                                    <Link className="cart_buybut"to="/custinfo">Proceed</Link>
                                   </button>
                                    <br />
                                   </i>
@@ -76,15 +76,15 @@ function Cart1() {
           if (obj.email === themer.email) {
             return (
               <div>
-                <section class="h-100">
-                  <div class="cart_container h-100 py-5 ">
-                    <div class="row d-flex justify-content-center align-items-center h-100 card-body">
-                      <div class="col-10 border border-dark">
-                        <div class=" mb-4">
-                          <div class="card-body p-4">
-                            <div class="row d-flex justify-content-between align-items-center">
-                              <div class="col-md-2 col-lg-2 col-xl-2">
-                                <div class="k justify-content-between align-items-center">
+                <section className="h-100">
+                  <div className="cart_container h-100 py-5 ">
+                    <div className="row d-flex justify-content-center align-items-center h-100 card-body">
+                      <div className="col-10 border border-dark">
+                        <div className=" mb-4">
+                          <div className="card-body p-4">
+                            <div className="row d-flex justify-content-between align-items-center">
+                              <div className="col-md-2 col-lg-2 col-xl-2">
+                                <div className="k justify-content-between align-items-center">
                                   <img
                                     className="cart_img"
                                     src={obj.image}
@@ -92,27 +92,27 @@ function Cart1() {
                                   />
                                 </div>
                               </div>
-                              <div class="col-md-3 col-lg-3 col-xl-3">
-                                <p class="lead fw-normal mb-4">{obj.name}</p>
+                              <div className="col-md-3 col-lg-3 col-xl-3">
+                                <p className="lead fw-normal mb-4">{obj.name}</p>
                               </div>
-                              <div class="col-md-3 col-lg-3 col-xl-2 offset-lg-1">
-                                <h5 class="mb-0">₹{obj.price}</h5>
+                              <div className="col-md-3 col-lg-3 col-xl-2 offset-lg-1">
+                                <h5 className="mb-0">₹{obj.price}</h5>
                               </div>
-                              <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                <a href="#!" class="text-danger">
-                                  <i class="fas fa-trash fa-lg">
-                                  <button class="btn btn-primary" type="button" onClick={() => handleDelete(obj._id)}>
+                              <div className="col-md-1 col-lg-1 col-xl-1 text-end">
+                                <a href="#!" className="text-danger">
+                                  <i className="fas fa-trash fa-lg">
+                                  <button className="btn btn-primary" type="button" onClick={() => handleDelete(obj._id)}>
                                   Remove
                                   </button>
                                    <br />
                                   </i>
                                   </a>
                               </div>
-                              <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                <a href="#!" class="text-danger">
-                                  <i class="fas fa-trash fa-lg">
-                                  <button class="btn btn-primary" type="button" >
-                                    <Link class="cart_buybut"to="/custinfo">Buy Now</Link>
+                              <div className="col-md-1 col-lg-1 col-xl-1 text-end">
+                                <a href="#!" className="text-danger">
+                                  <i className="fas fa-trash fa-lg">
+                                  <button className="btn btn-primary" type="button" >
+                                    <Link className="cart_buybut"to="/custinfo">Buy Now</Link>
                                   </button>
                                    <br />
                                   </i>

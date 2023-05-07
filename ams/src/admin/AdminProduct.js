@@ -26,24 +26,24 @@ function getProducts() {
 
 
   return (
-    <body class="body_white">
+    <body className="body_white">
       <br />
       <h1 className="user_heading">Customer Details</h1>
       <br />
-      <section class="intro">
-        <div class="bg-image h-100" >
-          <div class="mask d-flex align-items-center h-100">
-            <div class="user_table container">
-              <div class="row justify-content-center">
-                <div class="col-12">
+      <section className="intro">
+        <div className="bg-image h-100" >
+          <div className="mask d-flex align-items-center h-100">
+            <div className="user_table container">
+              <div className="row justify-content-center">
+                <div className="col-12">
                   
-                    <div class="card-body p-0">
+                    <div className="card-body p-0">
                       <div
-                        class="table-responsive table-scroll"
+                        className="table-responsive table-scroll"
                         data-mdb-perfect-scrollbar="true"
                         
                       >
-                        <table class="table table-striped mb-0">
+                        <table className="table table-striped mb-0">
                           <thead >
                             <tr>
                               <th scope="col">Name</th>

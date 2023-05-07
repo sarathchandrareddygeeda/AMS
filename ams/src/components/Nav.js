@@ -22,7 +22,7 @@ export default function Nav({ children }) {
   }
   return (
     <nav
-      class={
+      className={
         1
           ? "navbar navbar-expand-lg  navbar-dark bg-dark": 0
       }
@@ -138,7 +138,7 @@ export default function Nav({ children }) {
                   
               
               {themer.email}&nbsp;
-              <img src={b} width="25" height="25" class="d-inline-block align-top rounded-circle" alt=""/>
+              <img src={b} width="25" height="25" className="d-inline-block align-top rounded-circle" alt=""/>
                 </Link>
                 <ul className="dropdown-menu">
                 <li>
