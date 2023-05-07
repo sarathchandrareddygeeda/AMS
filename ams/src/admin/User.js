@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function User() {
     const [result, setResult] = useState([]);
     const[state, setState]=useState(1)
-    
+    const[c,setC]=useState(0)
 
     useEffect(()=>
     {
@@ -19,16 +19,20 @@ function getProducts() {
     }).then((response) => {
         console.log(response.data);
         setResult(response.data);
+        hand(result.length())
     }).catch((error) => {
         console.log(error)
     })
 }
-
+function hand(k)
+{
+  setC(k);
+}
 
   return (
     <body className="body_white">
       <br />
-      <h1 className="user_heading">User Details</h1>
+      <h1 className="user_heading">User Details  ( Count : {c})</h1>
       <br />
       <section className="intro">
         <div className="bg-image h-100" >
@@ -43,6 +47,7 @@ function getProducts() {
                         data-mdb-perfect-scrollbar="true"
                         
                       >
+                        
                         <table className="table table-striped mb-0">
                           <thead >
                             <tr>
@@ -51,9 +56,12 @@ function getProducts() {
                               <th scope="col">Email</th>
                             </tr>
                           </thead>
+                          
                           <tbody>
                           {
+                            
                             result.map((obj)=>{
+                            
                                 return(
                                 <tr>
                                   <td>{obj._id}</td>
@@ -61,6 +69,7 @@ function getProducts() {
                                   <td>{obj.email}</td>
                                 </tr>
                                 )
+
                             }
                             )
                           }

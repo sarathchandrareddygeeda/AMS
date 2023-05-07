@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function User() {
     const [result, setResult] = useState([]);
     const[state, setState]=useState(1)
-    
+    const[c,setC]=useState(0)
 
     useEffect(()=>
     {
@@ -19,16 +19,22 @@ function getProducts() {
     }).then((response) => {
         console.log(response.data);
         setResult(response.data);
+        hand(result.length)
     }).catch((error) => {
         console.log(error)
     })
+}
+function hand(k)
+{
+  setC(k);
 }
 
 
   return (
     <body className="body_white">
       <br />
-      <h1 className="user_heading">Customer Details</h1>
+      <h1 className="user_heading">Customer Details 
+      (Count : {c})</h1>
       <br />
       <section className="intro">
         <div className="bg-image h-100" >

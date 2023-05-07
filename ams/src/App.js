@@ -18,7 +18,6 @@ import { ToastContainer } from "react-toastify";
 import Customer from "./admin/Customer"
 import Servicing from "./admin/Servicing"
 import Producti from "./admin/AdminProduct"
-import AddSpare from "./components/AddSpare"
 import Profile from "./components/Profile";
 import UploadSelect from "./components/UploadSelect";
 import RP from "./components/RP";
@@ -40,8 +39,6 @@ function App() {
           <Route path="spareparts" element={<BikeParts />} />
           <Route path="register" element={<Register />} />
           <Route path="upload" element={<Card />} />
-          <Route path="uploadspare" element={<AddSpare />} />
-          <Route path="uploadselect" element={<UploadSelect />} />
           <Route path="cart" element={<Cart />} />
           <Route path="*" element={<NoPage />} />
           <Route path="services" element={<Services />} />
