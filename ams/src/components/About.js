@@ -1,7 +1,9 @@
 import React from "react";
 import '../styles/About.css';
 import { useTheme } from "./themeContext";
-
+import saikishore from "../media/saikishore.png";
+import sarath from "../media/sarath.png";
+import koushik from "../media/koushik.jpg";
 
 export default function About({ children }) {
   const theme = useTheme();
@@ -23,7 +25,7 @@ export default function About({ children }) {
                     <div className="img-wrapper">
                       <img
                         className="team-img"
-                        src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert2.png"
+                        src={saikishore}
                         alt=""
                       />
                     </div>
@@ -65,7 +67,7 @@ export default function About({ children }) {
                     <div className="img-wrapper">
                       <img
                         className="team-img"
-                        src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert2.png"
+                        src={sarath}
                         alt=""
                       />
                     </div>
@@ -106,7 +108,7 @@ export default function About({ children }) {
                     <div className="img-wrapper">
                       <img
                         className="team-img"
-                        src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert2.png"
+                        src={koushik}
                         alt=""
                       />
                     </div>
