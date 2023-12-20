@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9060373c.css",
+    "main.js": "/static/js/main.f85eaca2.js",
+    "static/js/787.cfcfad0f.chunk.js": "/static/js/787.cfcfad0f.chunk.js",
+    "static/media/sarath.png": "/static/media/sarath.f9b62f7e25896c91741c.png",
+    "static/media/banner2.jpg": "/static/media/banner2.9c8c0d8022f795583406.jpg",
+    "static/media/saikishore.png": "/static/media/saikishore.34786c17ff4f56569eb1.png",
+    "static/media/banner5.jpg": "/static/media/banner5.aad956f9e121ca0ed098.jpg",
+    "static/media/banner4.jpg": "/static/media/banner4.b8bbe2d106c52492418a.jpg",
+    "static/media/banner3.jpg": "/static/media/banner3.c623d6550a06e432001e.jpg",
+    "static/media/p1.png": "/static/media/p1.be67d19c960c3558b675.png",
+    "static/media/bike1.png": "/static/media/bike1.acd447bd145b0f43dc3f.png",
+    "static/media/bike3.png": "/static/media/bike3.e000a612cd88587b6a21.png",
+    "static/media/bike2.png": "/static/media/bike2.2e73a3902e6820bf77fa.png",
+    "static/media/customerimg1.png": "/static/media/customerimg1.d2d879dcede8430502b6.png",
+    "static/media/uploadselect1.png": "/static/media/uploadselect1.2a75cd8422f2f71f772f.png",
+    "static/media/services1.png": "/static/media/services1.989206100b4858145b37.png",
+    "static/media/products12.png": "/static/media/products12.7579eba17605c71f1bf8.png",
+    "static/media/p3.png": "/static/media/p3.abb0676b0dbed049c814.png",
+    "static/media/registerimag.png": "/static/media/registerimag.22e9044cbbf13658c4fb.png",
+    "static/media/loginright.png": "/static/media/loginright.18f8c212a26fde401a5d.png",
+    "static/media/upload.png": "/static/media/upload.b5ce7d4d6439b3a808b4.png",
+    "static/media/koushik.jpg": "/static/media/koushik.64cb81b697869bcbcf92.jpg",
+    "static/media/p2.png": "/static/media/p2.785681ea470771b582d4.png",
+    "static/media/uploadselect2.png": "/static/media/uploadselect2.7739733fc6125ca2e46f.png",
+    "static/media/userimg1.png": "/static/media/userimg1.ba17a5cb9a9d692a0560.png",
+    "static/media/profile.jpg": "/static/media/profile.2c62444c32a00e8661ef.jpg",
+    "static/media/profileimg.jpg": "/static/media/profileimg.9115187122df65ba733c.jpg",
+    "index.html": "/index.html",
+    "main.9060373c.css.map": "/static/css/main.9060373c.css.map",
+    "main.f85eaca2.js.map": "/static/js/main.f85eaca2.js.map",
+    "787.cfcfad0f.chunk.js.map": "/static/js/787.cfcfad0f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9060373c.css",
+    "static/js/main.f85eaca2.js"
+  ]
+}
