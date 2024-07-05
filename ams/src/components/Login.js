@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import { db_link } from "../link";
   // import 'react-toastify/dist/ReactToastify.css';
 export default function Login() {
   const theme = useTheme();
@@ -19,7 +20,7 @@ export default function Login() {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     axios
-      .post("http://localhost:6969/api/auth", {
+      .post(`${db_link}api/auth`, {
         email: data.get("email"),
         password: data.get("password"),
       })

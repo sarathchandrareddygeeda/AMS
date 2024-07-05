@@ -5,6 +5,7 @@ import { Navigate , Link} from 'react-router-dom';
 import { useTheme } from "./themeContext";
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import { db_link } from "../link";
 export default function Services() {
 	const [res, setRes] = useState(null);
 	const themer = useTheme();
@@ -12,7 +13,7 @@ export default function Services() {
 {
   event.preventDefault();
   const data = new FormData(event.currentTarget);
-  axios.post('http://localhost:6969/api/services', {
+  axios.post(`${db_link}api/services`, {
     fname : data.get('fname'),
     bcompany : data.get('bcompany'),
 	bmodel:data.get('bmodel'),

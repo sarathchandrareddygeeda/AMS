@@ -4,7 +4,7 @@ import axios from "axios";
 import { useTheme } from "./themeContext";
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
-
+import {db_link} from '../link.js';
   
 export default function OtpValidation() {
     const [res, setRes] = useState(null);
@@ -14,7 +14,7 @@ export default function OtpValidation() {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
         console.log(theme.reset)
-        axios.post("http://localhost:6969/api/otpvalid", {
+        axios.post(`${db_link}api/otpvalid`, {
           email:theme.reset,
           otp: data.get("otp")
       })

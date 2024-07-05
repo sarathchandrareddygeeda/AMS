@@ -5,6 +5,7 @@ import "../styles/profile.css";
 import { useState } from "react";
 import { useTheme } from "./themeContext";
 import axios from "axios";
+import { db_link } from "../link";
 
 export default function Profile() {
   const [result, setResult] = useState([]);
@@ -14,7 +15,7 @@ export default function Profile() {
       getProducts()
   },)
   function getProducts() {
-    axios.get("http://localhost:6969/api/profile-user", {
+    axios.get(`${db_link}api/profile-user`, {
         params: {}
     }).then((response) => {
         console.log(response.data);

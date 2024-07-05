@@ -8,6 +8,7 @@ import { Navigate , Link} from 'react-router-dom';
 import { useTheme } from "./themeContext";
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import { db_link } from "../link";
 
 export default function BikeParts({ children }) {
   const[state, setState]=useState(1)
@@ -53,7 +54,7 @@ function notifybcart(){
     })
 }
   function getProducts() {
-    axios.get("http://localhost:6969/api/card-spare", {
+    axios.get(`${db_link}api/card-spare`, {
         params: {}
     }).then((response) => {
         console.log(response.data);
@@ -70,7 +71,7 @@ const handleCart= (event, objid,objprice,objname,objimage)=>
  console.log(objimage)
   event.preventDefault();
 
-  axios.post('http://localhost:6969/api/cart', {
+  axios.post(`${db_link}api/cart`, {
     productId:objid,
     email:themer.email,
     name:objname,

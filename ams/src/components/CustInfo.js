@@ -4,6 +4,7 @@ import "../styles/custinfo.css";
 import { ToastContainer, toast } from 'react-toastify';
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { db_link } from "../link";
 export default function CustInfo() {
   const [res, setRes] = useState(null);
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ export default function CustInfo() {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     axios
-      .post("http://localhost:6969/api/custinfo", {
+      .post(`${db_link}api/custinfo`, {
         fname: data.get("firstname"),
         lname: data.get("lastname"),
         pno:data.get("pno"),

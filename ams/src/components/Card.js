@@ -3,6 +3,7 @@
 // // import '../styles/card.scss'
 // export default function Card() {
   import { useEffect, useState } from "react";
+import { db_link } from "../link";
   export default function Card() {
     const [image, setImage] = useState("");
     const [allImage,setAllImage]=useState([]);
@@ -24,7 +25,7 @@
   
     const  uploadImage=(event) =>{
       const data1 = new FormData(event.currentTarget);
-      fetch("http://localhost:6969/api/upload", {
+      fetch(`${db_link}api/upload`, {
         method: "POST",
   
         crossDomain: true,

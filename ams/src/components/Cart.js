@@ -6,6 +6,7 @@ import "../styles/cart.css";
 import { useTheme } from "./themeContext";
 import { Link } from "react-router-dom";
 import { Navigate} from 'react-router-dom';
+import { db_link } from "../link";
 function Cart1() {
   const [result, setResult] = useState(" ");
   const themer = useTheme();
@@ -17,7 +18,7 @@ function Cart1() {
   });
   function getProducts1() {
     axios
-      .get("http://localhost:6969/api/cart-get", {
+      .get(`${db_link}api/cart-get`, {
         params: {},
       })
       .then((response) => {
@@ -31,7 +32,7 @@ function Cart1() {
   function handleDelete(objId) {
     console.log(objId);
     axios
-      .post("http://localhost:6969/api/remove", {
+      .post(`${db_link}api/remove`, {
         _id: objId,
       })
       .then((response) => {

@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { useTheme } from "./themeContext";
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import { db_link } from "../link";
 
 
 export default function RP() {
@@ -31,7 +32,7 @@ export default function RP() {
       "gfq6NagqRdwFMbbNE"
     );
      const data = new FormData(e.currentTarget);
-    axios.post('http://localhost:6969/api/resetpass', {
+    axios.post(`${db_link}api/resetpass`, {
       email : data.get('user_email'),
       otp :data.get('otp')
     }).then((response)=>{

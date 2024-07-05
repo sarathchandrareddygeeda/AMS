@@ -4,6 +4,7 @@ import axios from "axios";
 import { useTheme } from "./themeContext";
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import { db_link } from "../link";
 
 
 export default function ChangePassword() {
@@ -14,7 +15,7 @@ export default function ChangePassword() {
     console.log(theme.reset)
       event.preventDefault();
       const data = new FormData(event.currentTarget);
-      axios.post("http://localhost:6969/api/modifypass", {
+      axios.post(`${db_link}api/modifypass`, {
       email:theme.reset,
       password: data.get("password")
     })

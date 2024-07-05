@@ -4,8 +4,9 @@ import { useState } from "react";
 import axios from "axios";
 import { Navigate , Link} from 'react-router-dom';
 import { useTheme } from "./themeContext";
-import { ToastContainer, toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import { db_link } from "../link";
 export default function Product({ children }) {
   const[state, setState]=useState(1)
   const [result, setResult] = useState(" ");
@@ -50,7 +51,7 @@ export default function Product({ children }) {
     })
 }
   function getProducts() {
-    axios.get("http://localhost:6969/api/card", {
+    axios.get(`${db_link}api/card`, {
         params: {}
     }).then((response) => {
         console.log(response.data);
@@ -61,13 +62,9 @@ export default function Product({ children }) {
 }
 const handleCart= (event, objid,objprice,objname,objimage)=>
 {
- console.log(objid)
- console.log(objprice)
- console.log(objname)
- console.log(objimage)
   event.preventDefault();
 
-  axios.post('http://localhost:6969/api/cart', {
+  axios.post(`${db_link}api/cart`, {
     productId:objid,
     email:themer.email,
     name:objname,
